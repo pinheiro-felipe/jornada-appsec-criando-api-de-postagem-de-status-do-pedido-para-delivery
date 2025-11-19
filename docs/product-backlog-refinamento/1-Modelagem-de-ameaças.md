@@ -14,25 +14,35 @@ Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças.
 * Quem deseja fazer algo?
 * Quem inicia essa ação?
 
-**2. Endpoint/ação e eventos**
+**2. Ação ou evento invocado**
 
 * Qual endpoint, API, UI ou job é chamado?
 * Qual evento é invocado?
 
-**3. Dados sensíveis envolvidos**
+**3. Mini-fluxo / diagrama da história**
+
+* Desenhar componentes essenciais: usuário, interface, servidor de aplicação, servidor de DB
+* Não incluir elementos irrelevantes para esta história
+
+**4. Fronteiras de confiança / trust boundaries**
+
+* Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
+* Identificar pontos que exigem autenticação ou criptografia
+
+**5. Dados sensíveis envolvidos**
 
 * Quais dados são enviados e recebidos?
 * Apenas campos críticos e sensíveis.
 
-**4. Persistência dos dados**
+**6. Persistência dos dados**
 
 * Onde os dados são armazenados? (DB, serviço interno)
 
-**5. Serviços externos**
+**7. Serviços externos**
 
 * Há integrações com serviços externos? (IDP, pagamento, CDN)
 
-**6. Ativos**
+**8. Ativos**
 
 * Isso é algo que o sistema gerencia e que é valioso ou crítico para o negócio?
 * Tem algum requisito regulatório ou de compliance?
@@ -77,16 +87,6 @@ Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças.
 
 * Quais endpoints, serviços ou dados estão expostos?
 * Mapear somente o fluxo relevante da história.
-
-**9. Mini-fluxo / diagrama da história**
-
-* Desenhar componentes essenciais: usuário, interface, servidor de aplicação, servidor de DB
-* Não incluir elementos irrelevantes para esta história
-
-**10. Fronteiras de confiança / trust boundaries**
-
-* Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
-* Identificar pontos que exigem autenticação ou criptografia
 
 **11. Aplicação STRIDE (rápido)**
 
