@@ -3,23 +3,38 @@
 **Passo 1- O objetivo é entender o que estamos estamos construindo**
 
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
-  Nossa definição de escopo seguirá a ideia de Tarandach que defende a "modelagem de ameaças para cada história de usuário".
-  Esta etapa geralmente destaca os "ativos", que podem ser qualquer coisa que você queira proteger, pontos de acesso estratégico ou itens desejados por atacantes. Muitas vezes, esses 
-  ativos estão fora do escopo de um projeto e representam uma distração. Outras vezes, são difíceis de identificar antes que um atacante os explore.
+  Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem global do sistema consome tempo, recursos e logo fica obsoleta.
+  Esta etapa geralmente destaca os "ativos", que podem ser qualquer coisa que você queira proteger, pontos de acesso estratégico ou itens desejados por atacantes. 
   
-  
+Identifique o ator que exerce a ação.
 
-  
-Precisamos entender a aplicação que está sendo criada:
+Qual endpoint/ação é chamada? Qual evento é invocado?
 
-         
+Identifique os dados sensíveis envolvidos (envio/recebimento).
+
+Onde os dados são persistidos? (DB, serviço)
+
+Há serviços externos envolvidos?
+
+Ativos
+
+Isso é algo que o sistema gerencia e que é valioso ou crítico para o negócio?
+
+Tem algum requisito regulatório/compliance?
+
+Checklist de ativos (criação, impacto, valor, controle de acesso, essencialidade)
+
+Quem precisa de acesso e qual nível?
+
+Quem pode acessar a funcionalidade? (com base nos perfis e níveis de acesso)
+
+Identifique a superfície de ataque.
+
+Desenhe mini-fluxo da história (apenas componentes relevantes).
+
+Marque fronteiras/trust boundaries.
+               
+          
     
-           
-            3- Desenhe um diagrama de fluxo de dados do sistema para cada história de usuário https://owasp.org/www-project-threat-dragon/
-                  Definir a joia da coroa e classificar informação. Olhar CISSP 1 e 2
-            4- Identifique pontos de entrada de ataque
-       		  Mapear a superfície de ataque
-  	    5- Identificar ativos
-            6- Tem algum dado sensível aqui?
-            7- Tem algum requisito regulatório?
-            8- Quem pode acessar essa funcionalidade?
+  	
+      
