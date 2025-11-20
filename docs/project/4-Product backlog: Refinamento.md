@@ -6,6 +6,8 @@
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
 Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
 
+Para exemplificar nosso processo de modelagem de ameaças de forma mais prática possível e template que utlizamos, escolhemos uma história de usuário do nosso projeto.
+
 **1- História de usuário que terá suas ameaças modeladas**
 
       História de usuário em formato narrativo:
