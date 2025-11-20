@@ -6,33 +6,23 @@
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
 Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
 
-> **História de usuário em formato narrativo:**
->
-> E1-F1-H1: Como delivery de alimentação...
->
-> **História de usuário em formato estruturado:**
->
-> - **Ator:** Como delivery de alimentação
-> - **Ação:** quero adicionar
-> - **Dado:** uma nova postagem...
-
 **1- História de usuário que terá suas ameaças modeladas**
 
-      **História de usuário em formato narrativo:**
+      História de usuário em formato narrativo:
       
             E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, para que o cliente acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
-      **História de usuário em formato estruturado:**
+      História de usuário em formato estruturado:
 
-          **Ator:** Como delivery de alimentação
+          Ator: Como delivery de alimentação
 
-          **Ação:** quero adicionar
+          Ação: quero adicionar
 
-          **Dado:** uma nova postagem de mídia referente ao status atual do pedido
+          Dado: uma nova postagem de mídia referente ao status atual do pedido
 
-          **Ator que recebe o valor (ator implícito ou explícito):** para que o cliente
+          Ator que recebe o valor (ator implícito ou explícito): para que o cliente
     
-          **Valor recebido:** acompanhe o andamento do seu pedido desde o preparo até a entrega.
+          Valor recebido: acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
 **1. Identificação do ator**
 
