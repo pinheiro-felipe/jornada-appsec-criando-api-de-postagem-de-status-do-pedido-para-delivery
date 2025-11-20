@@ -28,38 +28,39 @@ Para exemplificar nosso processo de modelagem de ameaças de forma mais prática
     
          Valor recebido: acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
-**2. Identificação do ator**
+**2- Identificação do ator**
 
       Quem exerce a ação?
       Quem deseja fazer algo?
 
          Ator: Delivery de alimentação
 
-**2. Ação ou evento invocado**
+**3- Ação ou evento invocado**
 
-* Qual endpoint, API, UI ou job é chamado?
-* Qual evento é invocado?
+      Qual é o evento invocado?
 
-**3. Mini-fluxo / diagrama da história**
+         Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-* Desenhar componentes essenciais: usuário, interface, servidor de aplicação, servidor de DB
-* Não incluir elementos irrelevantes para esta história
+**4- Mini-fluxo / diagrama da história**
 
-**4. Fronteiras de confiança / trust boundaries**
+      Desenhar componentes essenciais como: ator, interface ou endpoint, servidor de aplicação, servidor de banco de dados
+      Não incluir elementos irrelevantes para esta história
 
-* Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
-* Identificar pontos que exigem autenticação ou criptografia
+**5- Fronteiras de confiança / trust boundaries**
 
-**5. Dados sensíveis envolvidos**
+      Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
+      Identificar pontos que exigem autenticação ou criptografia
 
-* Quais dados são enviados e recebidos?
-* Apenas campos críticos e sensíveis.
+**6. Dados sensíveis envolvidos**
 
-**6. Persistência dos dados**
+      Quais dados são trafegados?
+      Pensar no momento, apenas em campos críticos e sensíveis.
 
-* Onde os dados são armazenados? (DB, serviço interno)
+**7. Persistência dos dados**
 
-**7. Serviços externos**
+      Onde os dados são persistidos? (Banco de dados, serviço interno)
+
+**8. Serviços externos**
 
 * Há integrações com serviços externos? (IDP, pagamento, CDN)
 
@@ -108,7 +109,8 @@ Para exemplificar nosso processo de modelagem de ameaças de forma mais prática
 
 * Quais endpoints, serviços ou dados estão expostos?
 * Mapear somente o fluxo relevante da história.
-
+      Qual endpoint, API, UI ou job é chamado?
+  formulario ou endpoint
 **11. Aplicação STRIDE (rápido)**
 
 * O que pode dar errado nesta história?
