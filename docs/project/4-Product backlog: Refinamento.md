@@ -14,7 +14,7 @@ Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "T
          para que o cliente acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
 
-      História de usuário em formato estruturado:
+      Mesma história de usuário em formato estruturado:
 
          Ator: Como delivery de alimentação
 
