@@ -28,11 +28,12 @@ Para exemplificar nosso processo de modelagem de ameaças de forma mais prática
     
          Valor recebido: acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
-**1. Identificação do ator**
+**2. Identificação do ator**
 
-* Quem exerce a ação?
-* Quem deseja fazer algo?
-* Quem inicia essa ação?
+      Quem exerce a ação?
+      Quem deseja fazer algo?
+
+         Ator: Delivery de alimentação
 
 **2. Ação ou evento invocado**
 
