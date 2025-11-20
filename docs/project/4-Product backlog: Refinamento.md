@@ -9,6 +9,7 @@ Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "T
 **1- História de usuário que terá suas ameaças modeladas**
 
 **História de usuário em formato narrativo:**
+      
       E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, para que o cliente acompanhe o andamento do seu pedido           desde o preparo até a entrega.
 
 **História de usuário em formato estruturado:**
