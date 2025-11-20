@@ -1,13 +1,27 @@
 
-**Modelagem de ameaças passo a passo**
+### Modelagem de ameaças passo a passo ###
 
 **Passo 1- O objetivo é entender o que estamos estamos construindo**
 
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
-  Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem global do sistema consome tempo, recursos e logo fica obsoleta.
-  Esta etapa geralmente destaca os "ativos", que podem ser qualquer coisa que você queira proteger, pontos de acesso estratégico ou itens desejados por atacantes. 
-  
-### Mini-fluxo de análise por história de usuário (Tarandach)
+Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
+
+**1- História de usuário que terá suas ameaças modeladas**
+
+**História de usuário em formato narrativo:**
+      E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, para que o cliente acompanhe o andamento do seu pedido           desde o preparo até a entrega.
+
+**História de usuário em formato estruturado:**
+
+    **Ator:** Como delivery de alimentação
+
+    **Ação:** quero adicionar
+
+    **Dado:** uma nova postagem de mídia referente ao status atual do pedido
+
+    **Ator que recebe o valor (ator implícito ou explícito):** para que o cliente
+    
+    **Valor recebido:** acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
 **1. Identificação do ator**
 
