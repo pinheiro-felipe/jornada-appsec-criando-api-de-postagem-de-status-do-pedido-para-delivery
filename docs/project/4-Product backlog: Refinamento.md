@@ -44,6 +44,7 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
 **4- Mini-fluxo / diagrama da história de usuário**
 
       Incluir apenas elementos relevantes para a história
+![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
  <img src="https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png" alt="Foto de perfil" width="122" height="121" style="flex-shrink:0; border-radius:5px">
 
