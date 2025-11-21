@@ -50,11 +50,8 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
       
           Ator
           Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
-              Identificar pontos que exigem autenticação ou criptografia
-              Identificar quais dados críticos e sensíveis são trafegados.
-              Identificar requisitoS regulatórioS ou de compliance.
 
-              Tipos de ativos
+              Tipos de ativos:
                      
                   Dados sensíveis
                       Dados de pedido
@@ -81,6 +78,10 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
                       Host da API
                       Porta 3336 do banco
                       Container que executa o worker
+
+              Identificar pontos que exigem autenticação ou criptografia
+              Identificar quais dados críticos e sensíveis são trafegados.
+              Identificar requisitoS regulatórioS ou de compliance.
                          
           Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
           Local onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
