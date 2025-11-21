@@ -46,45 +46,45 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
 
       Desenhei o mini-fluxo usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
-      Inclui:         
-          Apenas elementos relevantes para a história de usuário
-              Ator
-              Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
-                  Identificar pontos que exigem autenticação ou criptografia
-                  Identificar quais dados críticos e sensíveis são trafegados.
-                  Identificar requisitoS regulatórioS ou de compliance.
+      Incluí apenas elementos relevantes para a história de usuário:
+      
+          Ator
+          Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+              Identificar pontos que exigem autenticação ou criptografia
+              Identificar quais dados críticos e sensíveis são trafegados.
+              Identificar requisitoS regulatórioS ou de compliance.
 
-                  Tipos de ativos
+              Tipos de ativos
                      
-                     Dados sensíveis
-                         Dados de pedido
-                         Dados do cliente
-                         Token JWT
-                         ID do pedido
-                         Status do pedido
-                         Mensagem enviada para o WhatsApp
-                         Dados persistidos no banco
+                  Dados sensíveis
+                      Dados de pedido
+                      Dados do cliente
+                      Token JWT
+                      ID do pedido
+                      Status do pedido
+                      Mensagem enviada para o WhatsApp
+                      Dados persistidos no banco
 
-                     Serviços críticos
-                         API do pedido
-                         API do WhatsApp
-                         Serviço de envio de mensagens
-                         Fila
-                         Banco de dados
+                  Serviços críticos
+                      API do pedido
+                      API do WhatsApp
+                      Serviço de envio de mensagens
+                      Fila
+                      Banco de dados
+                  
+                  Processos
+                      Seu worker/processador de mensagens
+                      Sua API
+                      Servidor web
 
-                     Processos
-                         Seu worker/processador de mensagens
-                         Sua API
-                         Servidor web
-
-                     Infraestrutura
-                         Host da API
-                         Porta 3336 do banco
-                         Container que executa o worker
+                  Infraestrutura
+                      Host da API
+                      Porta 3336 do banco
+                      Container que executa o worker
                          
           Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
-          Onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
-          Integrações com serviços externos se houver. (IDP, pagamento, CDN e etc.)
+          Local onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
+          Serviços externos se houver integração. (IDP, pagamento, CDN e etc.)
           
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
