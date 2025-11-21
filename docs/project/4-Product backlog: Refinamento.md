@@ -6,7 +6,7 @@
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
 Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
 
-Para exemplificar nosso processo de modelagem de ameaças de forma mais prática possível e template que utlizamos, escolhemos uma história de usuário do nosso projeto.
+Para exemplificar nosso processo de modelagem de ameaças da forma mais prática possível, escolhemos uma história de usuário do nosso projeto.
 
 **1- História de usuário que terá suas ameaças modeladas**
 
@@ -37,14 +37,16 @@ Para exemplificar nosso processo de modelagem de ameaças de forma mais prática
 
 **3- Ação ou evento invocado**
 
-      Qual é o evento invocado?
+      Qual evento é invocado?
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-**4- Mini-fluxo / diagrama da história**
+**4- Mini-fluxo / diagrama da história de usuário**
 
-      Desenhar componentes essenciais como: ator, interface ou endpoint, servidor de aplicação, servidor de banco de dados
-      Não incluir elementos irrelevantes para esta história
+      Incluir apenas elementos relevantes para a história
+
+      <img width="1137" height="506" alt="image" src="https://github.com/user-attachments/assets/caf4581b-cb87-43f6-a686-25dbafffc59e" />
+
 
 **5- Fronteiras de confiança / trust boundaries**
 
