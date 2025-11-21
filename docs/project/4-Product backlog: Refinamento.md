@@ -48,7 +48,7 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
       
       Incluí apenas elementos relevantes para a história de usuário:
       
-          Ator
+          Ator (Identificar quais atores pode executar essa funcionalidade)
           Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
 
               Tipos de ativos:
@@ -79,10 +79,12 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
                       Porta 3336 do banco
                       Container que executa o worker
 
-              Identificar pontos que exigem autenticação ou criptografia
+              Identificar pontos que exigem autenticação e autorização
               Identificar quais dados críticos e sensíveis são trafegados.
               Identificar requisitoS regulatórioS ou de compliance.
-                         
+              Identificar pontos que exigem criptografia
+              Identificar quem precisa de permissão de acesso ao ativo e qual nível mpinimo necessário.
+              
           Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
           Local onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
           Serviços externos se houver integração. (IDP, pagamento, CDN e etc.)
@@ -91,20 +93,6 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
 
         
           
-**Checklist para identificar se algo é um ativo**
-
-* Precisamos controlar acesso ou uso desse item?
-
-* Quem precisa de acesso a esse ativo e qual nível?
-
-**7. Controle de acesso da funcionalidade**
-
-* Quem pode executar esta funcionalidade?
-* Exemplos:
-
-  * Gestor da plataforma: leitura apenas
-  * Diretor da plataforma: leitura, alteração e refazer
-* Observação: determinar autenticação, autorização e privilégios diferenciados
 
 **8. Identificação da superfície de ataque**
 
