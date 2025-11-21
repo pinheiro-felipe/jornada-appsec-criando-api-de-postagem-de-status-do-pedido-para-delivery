@@ -41,30 +41,23 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-**4- Mini-fluxo / diagrama da história de usuário**
+**4- Desenhar mini-fluxo / diagrama da história de usuário**
 
-      Modelei usando a ferramenta "Threat Dragon v2.5.0-latest" referenciada no OWASP.
-      Incluí apenas elementos relevantes para a história de usuário
+      Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" referenciada no OWASP.
       
+      Incluir:
+      
+          Apenas elementos relevantes para a história de usuário
+          Fronteiras de confiança, ou seja, onde a confiança muda. (Internet → backend → serviço interno → terceiro)
+          Identificar pontos que exigem autenticação ou criptografia
+          Quais dados críticos e sensíveis são trafegados?
+          Onde os dados são persistidos? (Banco de dados, serviço interno)
+          Há integrações com serviços externos? (IDP, pagamento, CDN)
+          
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**5- Fronteiras de confiança / trust boundaries**
 
-      Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
-      Identificar pontos que exigem autenticação ou criptografia
 
-**6. Dados sensíveis envolvidos**
-
-      Quais dados são trafegados?
-      Pensar no momento, apenas em campos críticos e sensíveis.
-
-**7. Persistência dos dados**
-
-      Onde os dados são persistidos? (Banco de dados, serviço interno)
-
-**8. Serviços externos**
-
-* Há integrações com serviços externos? (IDP, pagamento, CDN)
 
 **8. Ativos**
 
