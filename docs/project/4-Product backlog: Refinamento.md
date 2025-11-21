@@ -44,67 +44,55 @@ Para exemplificar nosso processo de modelagem de ameaças da forma mais prática
 
 **4- Desenhar mini-fluxo / diagrama da história de usuário**
 
-      Modelei usando a ferramenta "Threat Dragon v2.5.0-latest" referenciada no OWASP.
-      Incluí apenas elementos relevantes para a história de usuário
-      Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" referenciada no OWASP.
+      Desenhei o mini-fluxo usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
-      Incluir:
-      
+      Inclui:         
           Apenas elementos relevantes para a história de usuário
-          Fronteiras de confiança, ou seja, onde a confiança muda. (Internet → backend → serviço interno → terceiro)
-          Identificar pontos que exigem autenticação ou criptografia
-          Quais dados críticos e sensíveis são trafegados?
-          Onde os dados são persistidos? (Banco de dados, serviço interno)
-          Há integrações com serviços externos? (IDP, pagamento, CDN)
+              Ator
+              Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+                  Identificar pontos que exigem autenticação ou criptografia
+                  Identificar quais dados críticos e sensíveis são trafegados.
+                  Identificar requisitoS regulatórioS ou de compliance.
+
+                  Tipos de ativos
+                     
+                     Dados sensíveis
+                         Dados de pedido
+                         Dados do cliente
+                         Token JWT
+                         ID do pedido
+                         Status do pedido
+                         Mensagem enviada para o WhatsApp
+                         Dados persistidos no banco
+
+                     Serviços críticos
+                         API do pedido
+                         API do WhatsApp
+                         Serviço de envio de mensagens
+                         Fila
+                         Banco de dados
+
+                     Processos
+                         Seu worker/processador de mensagens
+                         Sua API
+                         Servidor web
+
+                     Infraestrutura
+                         Host da API
+                         Porta 3336 do banco
+                         Container que executa o worker
+                         
+          Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
+          Onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
+          Integrações com serviços externos se houver. (IDP, pagamento, CDN e etc.)
           
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**5- Fronteiras de confiança / trust boundaries**
-
-      Onde a confiança muda? (Internet → backend → serviço interno → terceiro)
-      Identificar pontos que exigem autenticação ou criptografia
-
-**6. Dados sensíveis envolvidos**
-
-      Quais dados são trafegados?
-      Pensar no momento, apenas em campos críticos e sensíveis.
-
-**7. Persistência dos dados**
-
-      Onde os dados são persistidos? (Banco de dados, serviço interno)
-
-**8. Serviços externos**
-
-* Há integrações com serviços externos? (IDP, pagamento, CDN)
-**9. Ativos**
-
-* Isso é algo que o sistema gerencia e que é valioso ou crítico para o negócio?
-* Tem algum requisito regulatório ou de compliance?
-
+        
+          
 **Checklist para identificar se algo é um ativo**
 
-* O sistema cria, processa ou mantém esse item?
-
-  * Exemplos: endpoint, banco de dados, serviço, fila, arquivo
-  * Métrica: Se o sistema gera ou transforma dados → sim
-* A perda ou corrupção desse item impactaria o negócio ou operação?
-
-  * Impacto financeiro, operacional, regulatório ou de reputação
-  * Métrica: Se sim, impacto > 0 → sim
-* Existem dados ou funcionalidades valiosas associadas a ele?
-
-  * Dados sensíveis, pedidos, informações pessoais, logs críticos
-  * Métrica: Se tiver valor → sim
 * Precisamos controlar acesso ou uso desse item?
-
-  * Se usuários não autorizados poderiam alterar, acessar ou apagar
-  * Métrica: Se sim → sim
-* O item é único ou essencial para o fluxo do sistema?
-
-  * Se removido, o fluxo de negócio seria interrompido
-  * Métrica: Se essencial → sim
-
-**Pergunta adicional de acesso aos ativos**
 
 * Quem precisa de acesso a esse ativo e qual nível?
 
