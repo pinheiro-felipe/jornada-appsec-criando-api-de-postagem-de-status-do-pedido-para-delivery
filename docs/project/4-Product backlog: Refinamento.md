@@ -50,13 +50,17 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
       Incluí apenas elementos relevantes para a história de usuário:
       
           Entidade externa/Ator (External entity): Qualquer coisa que interage com o sistema, ou seja, quem executa a ação.
+          
           Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
+          
           Armazenamento de dado (Data storage): Qualquer lugar onde o dado fica guardado.
+          
           Limite de Confiança (Boundary / Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de segurança.
               Desenhe um boundary quando:
                   Mudar a rede (externa → interna)
                   Mudar quem controla (cliente → servidor)
                   Mudar permissões
+                  
           Fluxo de dados (Data flow): A seta que mostra como os dados circulam.
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
