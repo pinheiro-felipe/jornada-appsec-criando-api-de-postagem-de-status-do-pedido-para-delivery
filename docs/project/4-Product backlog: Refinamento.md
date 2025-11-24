@@ -45,7 +45,8 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
 
 **1.4- Desenho do mini-fluxo / diagrama da história de usuário**
 
-      Desenhei o mini-fluxo usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
+      Desenhar o mini-fluxo da história de usuário. 
+      Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
       
@@ -58,48 +59,52 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
                   Mudar quem controla (cliente → servidor)
                   Mudar permissões
           Fluxo de dados (Data flow): A seta que mostra como os dados circulam.
-          
-          Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
 
-              Tipos de ativos:
+          ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
+
+**1.5- Identificar os ativos no fluxo desenhado**
+
+      Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+
+          Tipos de ativos:
                      
-                  Dados sensíveis
-                      Dados de pedido
-                      Dados do cliente
-                      Token JWT
-                      ID do pedido
-                      Status do pedido
-                      Mensagem enviada para o WhatsApp
-                      Dados persistidos no banco
+              Dados sensíveis
+                  Dados de pedido
+                  Dados do cliente
+                  Token JWT
+                  ID do pedido
+                  Status do pedido
+                  Mensagem enviada para o WhatsApp
+                  Dados persistidos no banco
 
-                  Serviços críticos
-                      API do pedido
-                      API do WhatsApp
-                      Serviço de envio de mensagens
-                      Fila
-                      Banco de dados
+              Serviços críticos
+                  API do pedido
+                  API do WhatsApp
+                  Serviço de envio de mensagens
+                  Fila
+                  Banco de dados
                   
-                  Processos
-                      Seu worker/processador de mensagens
-                      Sua API
-                      Servidor web
+              Processos
+                  Seu worker/processador de mensagens
+                  Sua API
+                  Servidor web
 
-                  Infraestrutura
-                      Host da API
-                      Porta 3336 do banco
-                      Container que executa o worker
+              Infraestrutura
+                  Host da API
+                  Porta 3336 do banco
+                  Container que executa o worker
 
-              Identificar pontos que exigem autenticação e autorização
-              Identificar quais dados críticos e sensíveis são trafegados.
-              Identificar requisitoS regulatórioS ou de compliance.
-              Identificar pontos que exigem criptografia
-              Identificar quem precisa de permissão de acesso ao ativo e qual nível mpinimo necessário.
+          Identificar pontos que exigem autenticação e autorização
+          Identificar quais dados críticos e sensíveis são trafegados.
+          Identificar requisitoS regulatórioS ou de compliance.
+          Identificar pontos que exigem criptografia
+          Identificar quem precisa de permissão de acesso ao ativo e qual nível mpinimo necessário.
               
           Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
           Local onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
           Serviços externos se houver integração. (IDP, pagamento, CDN e etc.)
           
-![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
+
 
         
           
