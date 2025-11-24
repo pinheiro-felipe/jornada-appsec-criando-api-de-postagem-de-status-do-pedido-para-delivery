@@ -86,8 +86,6 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
                   Serviço de envio de mensagens
                   Fila
                   Banco de dados
-                  
-              Processos
                   Seu worker/processador de mensagens
                   Sua API
                   Servidor web
