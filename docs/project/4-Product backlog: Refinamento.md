@@ -13,6 +13,9 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
         E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, 
         para que o cliente acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
+        E1: Representa o épico
+        F1: Representa a funcionalidade
+        H1: Representa a história de usuário
 
     Mesma história de usuário em formato estruturado:
 
@@ -26,27 +29,36 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
     
         Valor recebido: acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
-**1.2- Identificação do ator**
+**1.2- Ator**
 
       Quem exerce a ação?
       Quem deseja fazer algo?
 
          Ator: Delivery de alimentação
          
-**3- Ação ou evento invocado**
+**1.3- Ação ou evento invocado**
 
       Qual evento é invocado?
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
 
-**4- Desenhar mini-fluxo / diagrama da história de usuário**
+**1.4- Desenho do mini-fluxo / diagrama da história de usuário**
 
       Desenhei o mini-fluxo usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
       
-          Ator (Identificar quais atores pode executar essa funcionalidade)
+          Entidade externa/Ator (External entity): Qualquer coisa que interage com o sistema, ou seja, quem executa a ação.
+          Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
+          Armazenamento de dado (Data storage): Qualquer lugar onde o dado fica guardado.
+          Limite de Confiança (Boundary / Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de segurança.
+              Desenhe um boundary quando:
+                  Mudar a rede (externa → interna)
+                  Mudar quem controla (cliente → servidor)
+                  Mudar permissões
+          Fluxo de dados (Data flow): A seta que mostra como os dados circulam.
+          
           Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
 
               Tipos de ativos:
