@@ -43,9 +43,8 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
 
-**1.4- Desenho do mini-fluxo / diagrama da história de usuário**
+**1.4- Desenho do mini-fluxo da história de usuário**
 
-      Desenhar o mini-fluxo da história de usuário. 
       Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
