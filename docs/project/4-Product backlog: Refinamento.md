@@ -67,7 +67,7 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
 
 **1.5- Identificar os ativos no fluxo desenhado**
 
-      Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+      Ativo (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
 
           Tipos de ativos:
                      
