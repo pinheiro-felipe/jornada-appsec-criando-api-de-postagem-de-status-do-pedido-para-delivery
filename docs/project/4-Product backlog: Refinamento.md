@@ -65,11 +65,11 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**1.5- Identificar os ativos no fluxo desenhado**
+**1.5- Identificar os ativos no mini-fluxo desenhado**
 
       Ativo (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
 
-          Tipos de ativos:
+          Alguns tipos de ativos:
                      
               Dados sensíveis
                   Dados de pedido
@@ -94,6 +94,8 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
                   Host da API
                   Porta 3336 do banco
                   Container que executa o worker
+                  
+**1.6- Identificar os ativos no mini-fluxo desenhado**
 
           Identificar pontos que exigem autenticação e autorização
           Identificar quais dados críticos e sensíveis são trafegados.
