@@ -1,12 +1,10 @@
 
 ### Modelagem de ameaças passo a passo ###
 
-**Passo 1- O objetivo é entender o que estamos estamos construindo**
+#### 1º- Temos que entender o que estamos estamos construindo ####
 
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
-Nossa definição de escopo seguirá a ideia de Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
-
-Para exemplificar nosso processo de modelagem de ameaças da forma mais prática possível, escolhemos uma história de usuário do nosso projeto.
+A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
 
 **1- História de usuário que terá suas ameaças modeladas**
 
