@@ -1,5 +1,6 @@
 
 ## Modelagem de ameaças passo a passo ##
+Antes de criar a modelagem de ameaças, já devo ter o esboço de uma arquitetura base de como será a aplicação ou pelo menos uma proposta de solução técnica. Não precisa ser perfeita, é apenas a arquitetura candidata.
 
 ### 1º- Temos que entender o que estamos estamos construindo ##
 
@@ -44,8 +45,19 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-**1.4- Desenho do mini-fluxo da história de usuário**
+**1.4- Desenho do mini-fluxo essencial da história de usuário**
 
+      Izar Tarandach defende uma abordagem simples o suficiente para que:
+          O dev consiga fazer sozinho enquanto lê a história e pensa na implementação
+          Rápido
+          Como parte do fluxo natural de programação
+          Sem travar o sprint
+
+      Dicas gerais:
+          Faça um mini-fluxo essencial pequeno e que seja descartável.
+          Não se preocupe com artefatos visuais complexos.
+          Ele não é feito para ser eterno, nem pretende cobrir o sistema como um todo
+      
       Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
@@ -104,28 +116,38 @@ do sistema consome tempo, recursos e logo fica obsoleta.
                           Host da API
                           Porta 3336 do banco
                           Container que executa o worker
-                          
-          [ ] Superfície de ataque
-          [ ] STRIDE
-                  O que pode dar errado nesta história?
-                  Quem poderia abusar deste endpoint?
-                  Pode ocorrer spoofing?
-                  Pode ocorrer tampering?
-                  Precisa de autenticação?
-                  Para cada alerta, escrever mitigação.
+
+### 2º- Descobrir as ameaças e o que pode dar errado ##
+
+**2.1- Superfície de ataque**
+
+**2.2- STRIDE**
+    O que pode dar errado nesta história?
+    Quem poderia abusar deste endpoint?
+    Pode ocorrer spoofing?
+    Pode ocorrer tampering?
+    Precisa de autenticação?
+    Para cada alerta, escrever mitigação.
 
 ---
 
 **Dicas Tarandach:**
 
 
-* Checklist If-This / Then-That:
+* Checklist If-This (representa a condição que precisa ser satisfeita) / Then-That (representa a ação que será executada se a condição for satisfeita):
+ Identificar as condições "If-This" para cada história de usuário e então aplicar a ação "Then-That" correspondente
+ SE minha história envolve entrada de usuário,
+ENTÃO considerar validação, sanitização, limites.
+SE minha história envia dados para outro serviço,
+ENTÃO considerar autenticação, autorização, integridade.
+SE minha história manipula dados sensíveis,
+ENTÃO aplicar medidas de proteção de confidencialidade.
 
   * Entrada de usuário → validar, sanitizar, limitar
   * Dados enviados a outro serviço → autenticação, autorização, integridade
   * Dados sensíveis → medidas de confidencialidade
 
-Esta ordem garante que **ativos, controle de acesso e ameaças** sejam identificados de forma **rápida, objetiva e replicável** para qualquer dev trabalhando na história.
+
 
           
     
