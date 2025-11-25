@@ -52,17 +52,17 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 **1.4- Desenho do mini-fluxo essencial da história de usuário**
 
       O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem simples o suficiente para que:
-          O dev consiga fazer sozinho enquanto lê a história e pensa na implementação
+          O dev consiga fazer sozinho enquanto lê a história e pensa na sua implementação
           Seja rápido
           Faça parte do fluxo natural da programação
           Não trave o sprint
 
       Dicas gerais:
-          Faça um mini-fluxo essencial pequeno e que seja descartável.
+          Faça um mini-fluxo essencial pequeno.
           Não se preocupe com artefatos visuais complexos.
-          Ele não é feito para ser eterno, nem pretende cobrir o sistema como um todo
+          Ele não é feito para ser eterno, nem pretende cobrir o sistema como um todo.
       
-      Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
+      Desenhei o nosso mini-fluxo essencial usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
       
