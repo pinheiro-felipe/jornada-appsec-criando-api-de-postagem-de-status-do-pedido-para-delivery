@@ -106,16 +106,13 @@ do sistema consome tempo, recursos e logo fica obsoleta.
                           Container que executa o worker
                           
           [ ] Superfície de ataque
-
-
-**11. Aplicação STRIDE (rápido)**
-
-* O que pode dar errado nesta história?
-* Quem poderia abusar deste endpoint?
-* Pode ocorrer spoofing?
-* Pode ocorrer tampering?
-* Precisa de autenticação?
-* Para cada alerta, escrever mitigação e ação (ex: autenticação obrigatória, logs, rate limit)
+          [ ] STRIDE
+                  O que pode dar errado nesta história?
+                  Quem poderia abusar deste endpoint?
+                  Pode ocorrer spoofing?
+                  Pode ocorrer tampering?
+                  Precisa de autenticação?
+                  Para cada alerta, escrever mitigação.
 
 ---
 
