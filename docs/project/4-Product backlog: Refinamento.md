@@ -52,7 +52,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
       Incluí apenas elementos relevantes para a história de usuário:
       
           Entidade externa (External entity): Qualquer coisa externa que não está sob meu controle e interage com o meu sistema.
-              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consomido por ela, 
+              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consumido por ela, 
               como meio de pagamento, CDN e etc.
           
           Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
