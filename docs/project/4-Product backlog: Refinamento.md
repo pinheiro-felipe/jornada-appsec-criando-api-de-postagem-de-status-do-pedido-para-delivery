@@ -64,8 +64,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
           Não se preocupe com artefatos visuais complexos.
           Ele não é feito para ser eterno, nem pretende cobrir o sistema como um todo.
 
-      <br>
-      
+
       Desenhei o nosso mini-fluxo essencial usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
       
       Incluí apenas elementos relevantes para a história de usuário:
