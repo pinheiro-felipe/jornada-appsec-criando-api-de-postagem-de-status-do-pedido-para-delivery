@@ -122,6 +122,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 **2.1- Superfície de ataque**
 
 **2.2- STRIDE: Baseado em categoria de ataque**
+
     Quais categorias de ataques podem afetar cada um dos componentes do mini-fluxo essencial (Process, Data Store e Data Flow)?
         Pode ocorrer Spoofing?
         Pode ocorrer Tampering?
