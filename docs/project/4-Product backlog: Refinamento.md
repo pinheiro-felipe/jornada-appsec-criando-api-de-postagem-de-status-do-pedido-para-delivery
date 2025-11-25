@@ -13,6 +13,8 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 **1.1- História de usuário que terá suas ameaças modeladas**
 
+    Peguei uma história de usuário do projeto "api de postagem de status do pedido para delivery" para demonstrar a construção do meu processo de modelagem de ameaças
+    
     História de usuário em formato narrativo:
       
         E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, 
