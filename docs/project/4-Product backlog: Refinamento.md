@@ -55,7 +55,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
               Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consumido por ela, 
               como meio de pagamento, CDN e etc.
           
-          Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
+          Processo (Process): Algo que faz alguma ação, executa lógica ou processamento e está sob meu controle
           
           Armazenamento de dado (Data storage): Qualquer lugar onde o dado é persistido. (Banco de dados, serviço interno e etc.)
           
