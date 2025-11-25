@@ -132,9 +132,11 @@ do sistema consome tempo, recursos e logo fica obsoleta.
     Para cada alerta existem mitigações.
     
 **2.3- Cheklist If-This / Then-That motor de descoberta de ameaças baseado em lógica e comportamento**
+
     Checklist If-This (representa a condição que precisa ser satisfeita) / Then-That (representa a ação que será executada se a condição for satisfeita).
     Busca descobrir o que acontece no sistema quando uma condição específica acontece.
     Ele identifica falhas lógicas, casos extremos, cenários condicionais, que o STRIDE às vezes não pega sozinho
+    
     Principalmente:
         Falhas de fluxo
         Falhas de regra de negócios
