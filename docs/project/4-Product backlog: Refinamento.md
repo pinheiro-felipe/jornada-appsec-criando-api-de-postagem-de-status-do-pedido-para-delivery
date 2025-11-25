@@ -51,7 +51,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 **1.4- Desenho do mini-fluxo essencial da história de usuário**
 
-      Izar Tarandach defende uma abordagem simples o suficiente para que:
+      O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem simples o suficiente para que:
           O dev consiga fazer sozinho enquanto lê a história e pensa na implementação
           Rápido
           Como parte do fluxo natural de programação
