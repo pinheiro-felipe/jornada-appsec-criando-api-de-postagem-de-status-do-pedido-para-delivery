@@ -53,9 +53,9 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
       O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem simples o suficiente para que:
           O dev consiga fazer sozinho enquanto lê a história e pensa na implementação
-          Rápido
-          Como parte do fluxo natural de programação
-          Sem travar o sprint
+          Seja rápido
+          Faça parte do fluxo natural da programação
+          Não trave o sprint
 
       Dicas gerais:
           Faça um mini-fluxo essencial pequeno e que seja descartável.
