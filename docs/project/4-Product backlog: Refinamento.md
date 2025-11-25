@@ -2,6 +2,8 @@
 ## Modelagem de ameaças passo a passo ##
 Antes de criar a modelagem de ameaças, já devo ter o esboço de uma arquitetura base de como será a aplicação ou pelo menos uma proposta de solução técnica. Não precisa ser perfeita, é apenas a arquitetura candidata.
 
+
+
 ### 1º- Temos que entender o que estamos estamos construindo ##
 
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
@@ -116,6 +118,8 @@ do sistema consome tempo, recursos e logo fica obsoleta.
                           Host da API
                           Porta 3336 do banco
                           Container que executa o worker
+
+
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
 
