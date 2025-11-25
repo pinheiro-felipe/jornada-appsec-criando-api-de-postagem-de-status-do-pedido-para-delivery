@@ -49,13 +49,14 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
       
       Incluí apenas elementos relevantes para a história de usuário:
       
-          Entidade externa/Ator (External entity): Qualquer coisa que interage com o sistema, ou seja, quem executa a ação.
+          Entidade externa (External entity): Qualquer coisa externa que não está sob meu controle e interage com o meu sistema.
+              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consomido por ela, como meio de pagamento, CDN e etc.
           
           Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
           
-          Armazenamento de dado (Data storage): Qualquer lugar onde o dado fica guardado.
+          Armazenamento de dado (Data storage): Qualquer lugar onde o dado é persistido. (Banco de dados, serviço interno e etc.)
           
-          Limite de Confiança (Boundary / Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de segurança.
+          Limite de Confiança (Boundary / Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de confiança.
               Desenhe um boundary quando:
                   Mudar a rede (externa → interna)
                   Mudar quem controla (cliente → servidor)
@@ -65,47 +66,41 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**1.5- Identificar os ativos no mini-fluxo desenhado**
+**1.5- Identificar no mini-fluxo desenhado**
 
-      Ativo (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
-
-          Alguns tipos de ativos:
-                     
-              Dados sensíveis
-                  Dados de pedido
-                  Dados do cliente
-                  Token JWT
-                  ID do pedido
-                  Status do pedido
-                  Mensagem enviada para o WhatsApp
-                  Dados persistidos no banco
-
-              Serviços críticos
-                  API do pedido
-                  API do WhatsApp
-                  Serviço de envio de mensagens
-                  Fila
-                  Banco de dados
-                  Seu worker/processador de mensagens
-                  Sua API
-                  Servidor web
-
-              Infraestrutura
-                  Host da API
-                  Porta 3336 do banco
-                  Container que executa o worker
-                  
-**1.6- Identificar os ativos no mini-fluxo desenhado**
-
-          Identificar pontos que exigem autenticação e autorização
-          Identificar quais dados críticos e sensíveis são trafegados.
-          Identificar requisitoS regulatórioS ou de compliance.
-          Identificar pontos que exigem criptografia
-          Identificar quem precisa de permissão de acesso ao ativo e qual nível mpinimo necessário.
+          Dados críticos e sensíveis trafegados.
+          Pontos que exigem criptografia
+          Pontos que exigem autenticação e autorização
+          RequisitoS regulatórios ou de compliance.        
+          Ativo (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+          
+              Alguns tipos de ativos:
               
-          Fronteiras de confiança, ou seja, onde a confiança muda. (Internet, backend, serviço interno, serviço externo e etc.)
-          Local onde os dados são persistidos. (Banco de dados, serviço interno e etc.)
-          Serviços externos se houver integração. (IDP, pagamento, CDN e etc.)
+                  Dados sensíveis
+                      Dados de pedido
+                      Dados do cliente
+                      Token JWT
+                      ID do pedido
+                      Status do pedido
+                      Mensagem enviada para o WhatsApp
+                      Dados persistidos no banco
+
+                  Serviços críticos
+                      API do pedido
+                      API do WhatsApp
+                      Serviço de envio de mensagens
+                      Fila
+                      Banco de dados
+                      Seu worker/processador de mensagens
+                      Sua API
+                      Servidor web
+
+                  Infraestrutura
+                      Host da API
+                      Porta 3336 do banco
+                      Container que executa o worker
+                  
+
           
 
 
