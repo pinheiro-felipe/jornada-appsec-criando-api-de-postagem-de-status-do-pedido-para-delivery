@@ -96,6 +96,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
           [ ] Dados críticos e sensíveis armazenados.
           [ ] Pontos que exigem criptografia.
           [ ] Pontos que exigem autenticação e autorização.
+          [ ] Protocolo de comunicação
           [ ] Requisitos regulatórios ou de compliance.        
           [ ] Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
           
