@@ -121,31 +121,51 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 **2.1- Superfície de ataque**
 
-**2.2- STRIDE**
-    O que pode dar errado nesta história?
-    Quem poderia abusar deste endpoint?
-    Pode ocorrer spoofing?
-    Pode ocorrer tampering?
-    Precisa de autenticação?
-    Para cada alerta, escrever mitigação.
+**2.2- STRIDE: Baseado em categoria de ataque**
+    Quais categorias de ataques podem afetar cada um dos componentes do mini-fluxo essencial (Process, Data Store e Data Flow)?
+        Pode ocorrer Spoofing?
+        Pode ocorrer Tampering?
+        Pode ocorrer Repudiation?
+        Pode ocorrer Information Disclosure?
+        Pode ocorrer Denial of Service?
+        Pode ocorrer Elevation of Privilege?
+    Para cada alerta existem mitigações.
+    
+**2.3- Cheklist If-This / Then-That motor de descoberta de ameaças baseado em lógica e comportamento**
+    Checklist If-This (representa a condição que precisa ser satisfeita) / Then-That (representa a ação que será executada se a condição for satisfeita).
+    Busca descobrir o que acontece no sistema quando uma condição específica acontece.
+    Ele identifica falhas lógicas, casos extremos, cenários condicionais, que o STRIDE às vezes não pega sozinho
+    Principalmente:
+        Falhas de fluxo
+        Falhas de regra de negócios
+        Falhas de sequência
+        Falhas por condição inesperada
+        Falhas de estado
+        Falhas de validação contextual
+        Falhas que só existem quando eventos se encadeiam
 
----
+    Exemplos de condicionais e ações:
+        
+        SE minha história envolve entrada de usuário,
+            ENTÃO considerar validação, sanitização, limites.
+        
+        SE minha história envia dados para outro serviço,
+            ENTÃO considerar autenticação, autorização, integridade.
+        
+        SE minha história manipula dados sensíveis,
+            ENTÃO aplicar medidas de proteção de confidencialidade.
 
-**Dicas Tarandach:**
-
-
-* Checklist If-This (representa a condição que precisa ser satisfeita) / Then-That (representa a ação que será executada se a condição for satisfeita):
- Identificar as condições "If-This" para cada história de usuário e então aplicar a ação "Then-That" correspondente
- SE minha história envolve entrada de usuário,
-ENTÃO considerar validação, sanitização, limites.
-SE minha história envia dados para outro serviço,
-ENTÃO considerar autenticação, autorização, integridade.
-SE minha história manipula dados sensíveis,
-ENTÃO aplicar medidas de proteção de confidencialidade.
-
-  * Entrada de usuário → validar, sanitizar, limitar
-  * Dados enviados a outro serviço → autenticação, autorização, integridade
-  * Dados sensíveis → medidas de confidencialidade
+        SE o usuário clicar para alterar o endereço sem estar autenticado,
+            ENTÃO redirecionar para login.
+        
+        SE alguém tentar alterar o endereço para um local já utilizado por outro cliente,
+            ENTÃO retornar erro.
+        
+        SE o sistema receber o update com campo vazio,
+            ENTÃO ignorar alteração.
+        
+        SE o request vier sem CSRF token,
+            ENTÃO bloquear tentativa suspeita.
 
 
 
