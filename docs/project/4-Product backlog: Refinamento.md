@@ -4,7 +4,9 @@
 ### 1º- Temos que entender o que estamos estamos construindo ##
 
 Como ponto de partida, precisamos definir o escopo do nosso modelo de ameaças. 
-A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor do livro "Threat modeling A Practical Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral do sistema consome tempo, recursos e logo fica obsoleta.
+A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor do livro "Threat modeling A Practical 
+Guide for Development Teams" que defende a "modelagem de ameaças para cada história de usuário", pois uma modelagem geral 
+do sistema consome tempo, recursos e logo fica obsoleta.
 
 **1.1- História de usuário que terá suas ameaças modeladas**
 
@@ -50,7 +52,8 @@ A definição de escopo que seguirei, é a mencionada por Izar Tarandach autor d
       Incluí apenas elementos relevantes para a história de usuário:
       
           Entidade externa (External entity): Qualquer coisa externa que não está sob meu controle e interage com o meu sistema.
-              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consomido por ela, como meio de pagamento, CDN e etc.
+              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consomido por ela, 
+              como meio de pagamento, CDN e etc.
           
           Processo (Process): Algo que faz alguma ação, executa lógica ou processamento.
           
