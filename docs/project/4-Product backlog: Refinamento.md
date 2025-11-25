@@ -44,7 +44,6 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-
 **1.4- Desenho do mini-fluxo da história de usuário**
 
       Desenhei usando a ferramenta "Threat Dragon v2.5.0-latest" mencionada no OWASP.
@@ -69,53 +68,46 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**1.5- Identificar no mini-fluxo desenhado**
+**1.5- Refinar o mini-fluxo desenhado, identificando**
 
-          Dados críticos e sensíveis trafegados.
-          Pontos que exigem criptografia
-          Pontos que exigem autenticação e autorização
-          RequisitoS regulatórios ou de compliance.        
-          Ativo (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
+          [ ] Endpoints.
+          [ ] Serviços.
+          [ ] Dados críticos e sensíveis trafegados.
+          [ ] Dados críticos e sensíveis armazenados.
+          [ ] Pontos que exigem criptografia.
+          [ ] Pontos que exigem autenticação e autorização.
+          [ ] Requisitos regulatórios ou de compliance.        
+          [ ] Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
           
-              Alguns tipos de ativos:
+                  Alguns tipos de ativos:
               
-                  Dados sensíveis
-                      Dados de pedido
-                      Dados do cliente
-                      Token JWT
-                      ID do pedido
-                      Status do pedido
-                      Mensagem enviada para o WhatsApp
-                      Dados persistidos no banco
+                      Dados sensíveis
+                          Dados de pedido
+                          Dados do cliente
+                          Token JWT
+                          ID do pedido
+                          Status do pedido
+                          Mensagem enviada para o WhatsApp
+                          Dados persistidos no banco
 
-                  Serviços críticos
-                      API do pedido
-                      API do WhatsApp
-                      Serviço de envio de mensagens
-                      Fila
-                      Banco de dados
-                      Seu worker/processador de mensagens
-                      Sua API
-                      Servidor web
+                      Serviços críticos
+                          API do pedido
+                          API do WhatsApp
+                          Serviço de envio de mensagens
+                          Fila
+                          Banco de dados
+                          Seu worker/processador de mensagens
+                          Sua API
+                          Servidor web
 
-                  Infraestrutura
-                      Host da API
-                      Porta 3336 do banco
-                      Container que executa o worker
-                  
+                      Infraestrutura
+                          Host da API
+                          Porta 3336 do banco
+                          Container que executa o worker
+                          
+          [ ] Superfície de ataque
 
-          
 
-
-        
-          
-
-**8. Identificação da superfície de ataque**
-
-* Quais endpoints, serviços ou dados estão expostos?
-* Mapear somente o fluxo relevante da história.
-      Qual endpoint, API, UI ou job é chamado?
-  formulario ou endpoint
 **11. Aplicação STRIDE (rápido)**
 
 * O que pode dar errado nesta história?
@@ -129,9 +121,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 **Dicas Tarandach:**
 
-* Foco na história de usuário, não em DFD completo
-* Diagrama rápido, descartável, story-focused
-* Parte do fluxo natural de implementação, não trava o sprint
+
 * Checklist If-This / Then-That:
 
   * Entrada de usuário → validar, sanitizar, limitar
