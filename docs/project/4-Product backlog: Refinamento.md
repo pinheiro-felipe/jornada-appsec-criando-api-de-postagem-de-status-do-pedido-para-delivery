@@ -124,47 +124,13 @@ do sistema consome tempo, recursos e logo fica obsoleta.
                   
           Fluxo de dados (Data flow): A seta que mostra como os dados circulam.
 
- Em nosso mini-fluxo essencial incluí apenas elementos relevantes para a história de usuário.
+ Em nosso desenho do mini-fluxo essencial abaixo, incluí apenas elementos relevantes para a história de usuário.
+ As informações que não estão visíveis como "dados críticos e sensíveis trafegados" estão dentro de cada seta que representa o fluxo dos dados.
+ Essa descrição aparece ao clicar na seta. 
+ O arquivo original com o desenho será armazenado em breve para que você possa fazer o donwload e visualizar no seu "Threat Dragon v2.5.0-latest".
       
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/320aec9d4266e95aac31f45a1a9a396930b6b3c9/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-**1.5- Refinar o mini-fluxo desenhado, identificando**
-
-          [ ] Endpoints.
-          [ ] Serviços.
-          [ ] Dados críticos e sensíveis trafegados.
-          [ ] Dados críticos e sensíveis armazenados.
-          [ ] Pontos que exigem criptografia.
-          [ ] Pontos que exigem autenticação e autorização.
-          [ ] Protocolo de comunicação
-          [ ] Requisitos regulatórios ou de compliance.        
-          [ ] Ativos (Algo que é valioso ou crítico para o negócio e que pode ser impactado por uma ameaça em nossa história de usuário)
-          
-                  Alguns tipos de ativos:
-              
-                      Dados sensíveis
-                          Dados de pedido
-                          Dados do cliente
-                          Token JWT
-                          ID do pedido
-                          Status do pedido
-                          Mensagem enviada para o WhatsApp
-                          Dados persistidos no banco
-
-                      Serviços críticos
-                          API do pedido
-                          API do WhatsApp
-                          Serviço de envio de mensagens
-                          Fila
-                          Banco de dados
-                          Seu worker/processador de mensagens
-                          Sua API
-                          Servidor web
-
-                      Infraestrutura
-                          Host da API
-                          Porta 3336 do banco
-                          Container que executa o worker
 <br>
 <br>
 
