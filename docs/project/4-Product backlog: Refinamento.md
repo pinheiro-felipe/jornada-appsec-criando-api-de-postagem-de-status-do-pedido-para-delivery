@@ -136,7 +136,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
 
-**2.1- Superfície de ataque**
+**2.1- Compenente**
 
 **2.2- STRIDE: Baseado em categoria de ataque**
 
