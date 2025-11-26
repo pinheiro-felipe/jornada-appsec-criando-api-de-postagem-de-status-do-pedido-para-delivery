@@ -1,5 +1,5 @@
 
-## Modelagem de ameaças passo a passo ##
+## Modelagem de ameaças passo a passo ## SENDO CORRIGIDO
 Antes de começar a modelagem de ameaças, devo possuir um esboço de uma arquitetura base de como será a aplicação ou pelo menos possuir uma proposta de solução técnica. Não precisa ser perfeita, é apenas uma arquitetura candidata.
 <br>
 <br>
