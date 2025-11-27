@@ -20,9 +20,9 @@ do consome tempo, recursos e logo fica obsoleta.
         E1-F1-H1: Como delivery de alimentação, quero adicionar uma nova postagem de mídia referente ao status atual do pedido, 
         para que o cliente acompanhe o andamento do seu pedido desde o preparo até a entrega.
 
-        E1: Indica o épico ao qual a funcionalidade está vinculada.
+        E1: Indica o épico ao qual a funcionalidade a seguir está vinculada.
         F1: Indica a funcionalidade ao qual a história de usuário está vinculada.
-        H1: Representa a história de usuário.
+        H1: Indica a história de usuário.
 
     Mesma história de usuário em formato estruturado:
 
