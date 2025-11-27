@@ -64,7 +64,8 @@ do consome tempo, recursos e logo fica obsoleta.
           Não se preocupe com artefatos visuais complexos.
           O mini-fluxo não é feito para ser eterno, nem pretende cobrir o sistema como um todo, apenas o necessário para entender 
           as ameaças no contexto da história de usuário.
-          Ele pode ser documentado como faremos ou apenas rascunhado já que o objetivo é encontrar as ameaças que podem impactar a história de usuário. 
+          Ele pode ser documentado como faremos ou apenas rascunhado já que o objetivo é encontrar as ameaças que podem impactar 
+          a história de usuário. 
           
       Identifique:
 
