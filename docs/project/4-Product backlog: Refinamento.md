@@ -24,7 +24,7 @@ do consome tempo, recursos e logo fica obsoleta.
         F1: Indica a funcionalidade ao qual a história de usuário está vinculada.
         H1: Indica a história de usuário.
 
-    Mesma história de usuário em formato estruturado:
+    Mesma história de usuário acima em formato estruturado:
 
         Ator: Como delivery de alimentação
 
