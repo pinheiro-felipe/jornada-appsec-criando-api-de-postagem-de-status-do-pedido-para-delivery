@@ -51,18 +51,18 @@ do consome tempo, recursos e logo fica obsoleta.
 
 **1.4- Desenho do mini-fluxo essencial da história de usuário**
 
-      O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem simples o suficiente para que:
+      Para fazer o desenho do mini-fluxo essencial da história de usuário, é preciso saber como é a arquitetura da aplicação ou como ela será.
       
-          O dev consiga fazer sozinho enquanto lê a história e pensa na sua implementação
-          Seja rápido
-          Faça parte do fluxo natural da programação
-          Não trave o sprint
+      O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem de modelagem de ameaças simples o suficiente para que:
+      
+          O dev consiga aplicar sozinho enquanto lê a história de usuário e pensa na implementação.
+          O processo seja rápido.
+          Se encaixe no seu fluxo natural de programação.
+          Não trave o sprint.
 
       Dicas gerais:
-      
-          Faça um mini-fluxo essencial pequeno.
           Não se preocupe com artefatos visuais complexos.
-          Ele não é feito para ser eterno, nem pretende cobrir o sistema como um todo.
+          O mini-fluxo não é feito para ser eterno, nem pretende cobrir o sistema como um todo, apenas o necessário para entender as ameaças no contexto da história de usuário.
           
       Identifique:
 
@@ -109,15 +109,15 @@ do consome tempo, recursos e logo fica obsoleta.
       Componentes da ferramenta "Threat Dragon v2.5.0-latest" usada para desenhar o mini-fluxo essencial:
                           
           Entidade externa (External entity): Qualquer coisa externa que não está sob nosso controle e interage com o sistema.
-              Pode ser um ator, como um usuário final ou um serviço externo que consome a minha aplicação ou é consumido por ela, 
+              Pode ser um ator, como um usuário final ou um serviço externo que consome a aplicação ou é consumido por ela, 
               como meios de pagamento, CDN e etc.
           
           Processo (Process): Algo que faz alguma ação, executa lógica ou processamento e está sob nosso controle
           
           Armazenamento de dado (Data storage): Qualquer lugar onde o dado é persistido. (Banco de dados, serviço interno e etc.)
           
-          Limite de Confiança (Boundary / Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de confiança.
-              Desenhe um boundary quando:
+          Limite de Confiança (Trust Boundary): Uma linha ou caixa que mostra onde muda o nível de confiança.
+              Desenhe um trust boundary quando:
                   Mudar a rede (externa → interna)
                   Mudar quem controla (cliente → servidor)
                   Mudar permissões
