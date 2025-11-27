@@ -69,13 +69,13 @@ do consome tempo, recursos e logo fica obsoleta.
           
       Identifique:
 
-          [ ] Entidade que interage com o sistema.
+          [ ] Entidade que interage com o sistema (usuário ou um serviço externo).
           [ ] Processo onde a ação é executada.
           [ ] Local onde o dado é persistido.
           [ ] Limite de Confiança.
           [ ] Fluxo dos dados.
           [ ] Endpoints.
-          [ ] Serviços.
+          [ ] .
           [ ] Dados críticos e sensíveis trafegados.
           [ ] Dados críticos e sensíveis armazenados.
           [ ] Pontos que exigem criptografia.
