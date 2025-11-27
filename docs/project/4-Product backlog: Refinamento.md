@@ -3,7 +3,6 @@
 Antes de começar a modelagem de ameaças, devo possuir um esboço de uma arquitetura base de como será a aplicação ou pelo menos possuir uma proposta de solução técnica. Não precisa ser perfeita, é apenas uma arquitetura candidata.
 
 <br>
-<br>
 
 ### 1º- Temos que entender o que estamos estamos construindo ##
 
