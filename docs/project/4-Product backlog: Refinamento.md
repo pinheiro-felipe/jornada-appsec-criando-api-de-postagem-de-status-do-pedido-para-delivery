@@ -69,7 +69,7 @@ do consome tempo, recursos e logo fica obsoleta.
           
       Identifique:
 
-          [ ] Entidade que interage com o sistema (usuário ou um serviço).
+          [ ] Entidade que interage com o sistema (usuário ou um serviço externo).
           [ ] Processo onde a ação é executada.
           [ ] Local onde o dado é persistido.
           [ ] Limite de Confiança.
