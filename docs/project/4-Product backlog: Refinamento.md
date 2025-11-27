@@ -75,7 +75,6 @@ do consome tempo, recursos e logo fica obsoleta.
           [ ] Limite de Confiança.
           [ ] Fluxo dos dados.
           [ ] Endpoints.
-          [ ] .
           [ ] Dados críticos e sensíveis trafegados.
           [ ] Dados críticos e sensíveis armazenados.
           [ ] Pontos que exigem criptografia.
@@ -109,7 +108,9 @@ do consome tempo, recursos e logo fica obsoleta.
                           Porta 3336 do banco
                           Container que executa o worker
                           
-      Componentes da ferramenta "Threat Dragon v2.5.0-latest" usada para desenhar o mini-fluxo essencial:
+      O mini-fluxo essencial foi desenhado usando a ferramenta "Threat Dragon v2.5.0-latest".
+
+      Componentes do Threat Dragon:
                           
           Entidade externa (External entity): Qualquer coisa externa que não está sob nosso controle e interage com o sistema.
               Pode ser um ator, como um usuário final ou um serviço externo que consome a aplicação ou é consumido por ela, 
@@ -129,7 +130,7 @@ do consome tempo, recursos e logo fica obsoleta.
 
       Em nosso desenho do mini-fluxo essencial abaixo, incluí apenas elementos relevantes para a história de usuário.
       As informações que não estão visíveis como "dados críticos e sensíveis trafegados" estão dentro de cada seta que representa o fluxo dos dados.
-      Essa descrição aparece ao clicar na seta. 
+      Ao clicar na seta é possível ver suas informações. 
       O arquivo original com o desenho será armazenado em breve para que você possa fazer o donwload e visualizar no seu "Threat Dragon v2.5.0-latest".
       
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/eacd1412a495992315a3803a59132021489342e2/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
