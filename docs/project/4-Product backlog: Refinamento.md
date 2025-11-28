@@ -144,12 +144,17 @@ do consome tempo, recursos e logo fica obsoleta.
 <br>
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
+Esta é uma atividade de "pesquisa" na qual você deseja encontrar as principais ameaças da sua aplicação. 
+Pode-se fazer brainstorming ou usar uma estrutura para ajudar a pensar. Estruturas que podem ajudar incluem STRIDE, Kill Chains, CAPEC e outros.
 
+O objetivo da categorização de ameaças é ajudar a identificar ameaças do invasor (STRIDE). O diagrama produzido anteriormente ajuda a identificar 
+os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
+  
 **2.1- Compenente**
 
 **2.2- STRIDE: Baseado em categoria de ataque**
 
-    Quais categorias de ataques podem afetar cada um dos componentes do mini-fluxo essencial (Process, Data Store e Data Flow)?
+    Quais categorias de ataques podem afetar cada um dos componentes do diagrama de raciocínio de ameaças (Process, Data Store e Data Flow)?
         Pode ocorrer Spoofing?
         Pode ocorrer Tampering?
         Pode ocorrer Repudiation?
