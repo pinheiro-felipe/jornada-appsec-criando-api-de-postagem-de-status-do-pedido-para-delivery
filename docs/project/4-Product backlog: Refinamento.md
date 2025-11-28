@@ -144,8 +144,8 @@ do consome tempo, recursos e logo fica obsoleta.
 <br>
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
-Esta é uma atividade de "pesquisa" na qual você deseja encontrar as principais ameaças da sua aplicação. 
-Pode-se fazer brainstorming ou usar uma estrutura para ajudar a pensar. Estruturas que podem ajudar incluem STRIDE, Kill Chains, CAPEC e outros.
+Esta é uma atividade de pesquisa na qual você busca identificar as principais ameaças da aplicação.
+Você pode fazer brainstorming ou utilizar alguma estrutura para orientar o raciocínio, como STRIDE, Kill Chain, CAPEC, Cornucopia (OWASP) e outras.
 
 O objetivo da categorização de ameaças é ajudar a identificar ameaças do invasor (STRIDE). O diagrama produzido anteriormente ajuda a identificar 
 os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
