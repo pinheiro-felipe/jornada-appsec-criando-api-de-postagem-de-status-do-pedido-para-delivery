@@ -51,9 +51,11 @@ do consome tempo, recursos e logo fica obsoleta.
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-**1.4- Desenho do mini-fluxo essencial da história de usuário**
+**1.4- Desenho do diagrama de raciocínio das ameaças**
 
-      Para fazer o desenho do mini-fluxo essencial da história de usuário, é preciso saber como é a arquitetura da aplicação ou como ela será.
+      O diagrama de raciocínio das ameaças, é um diagrama que se cria enquanto se rascunha a modelagem de ameaças para a história de usuário.
+     
+      Para fazer o desenho do diagrama de raciocínio, é preciso saber como é a arquitetura da aplicação ou como ela será.
       
       O engenheiro/arquiteto de segurança da informação Izar Tarandach defende uma abordagem de modelagem de ameaças simples o suficiente para que:
       
@@ -64,12 +66,13 @@ do consome tempo, recursos e logo fica obsoleta.
 
       Dicas gerais:
           Não se preocupe com artefatos visuais complexos.
-          O mini-fluxo não é feito para ser eterno, nem pretende cobrir o sistema como um todo, apenas o necessário para entender 
+          O diagrama de raciocínio das ameaças não é feito para ser eterno, nem pretende cobrir o sistema como um todo, apenas o necessário para entender 
           as ameaças no contexto da história de usuário.
-          Ele pode ser documentado como faremos ou apenas rascunhado já que o objetivo é encontrar as ameaças que possam impactar 
-          nossa história de usuário. 
+          Ele é criado para ser descartável, mas pode ser armazenado como uma forma de documentar o raciocínio do dev na modelagem de ameaças, o que pode ajudar muitos outros. 
+          Ele de maneira nenhuma tem a pretenção de representar a arquitetura oficial da aplicação, apenas o pensanmento do dev naquele momento.
+          Pode ser revisitado sempre que preciso, mas sempre deve ser comparando com a arquitetura oficial.
           
-      Identifique:
+      Para formar nosso racicínio das ameaças, vamos identificar:
 
           [ ] Entidade que interage com o sistema (usuário ou um serviço externo).
           [ ] Processo onde a ação é executada.
@@ -110,9 +113,9 @@ do consome tempo, recursos e logo fica obsoleta.
                           Porta 3336 do banco
                           Container que executa o worker
                           
-      O mini-fluxo essencial foi desenhado usando a ferramenta "Threat Dragon v2.5.0-latest".
+      O diagrama de racicínio foi desenhado usando a ferramenta "Threat Dragon v2.5.0-latest".
 
-      Componentes do Threat Dragon:
+      Componentes da ferramenta Threat Dragon:
                           
           Entidade externa (External entity): Qualquer coisa externa que não está sob nosso controle e interage com o sistema.
               Pode ser um ator, como um usuário final ou um serviço externo que consome a aplicação ou é consumido por ela, 
@@ -130,15 +133,26 @@ do consome tempo, recursos e logo fica obsoleta.
                   
           Fluxo de dados (Data flow): A seta que mostra como os dados circulam.
 
-      Em nosso desenho do mini-fluxo essencial abaixo, incluí apenas elementos relevantes para a história de usuário.
-      As informações que não estão visíveis como "dados críticos e sensíveis trafegados" estão dentro de cada seta que representa o fluxo dos dados.
-      Ao clicar na seta é possível ver suas informações. 
+      Em nosso diagrama de raciocínio abaixo, incluí apenas elementos relevantes para a história de usuário.
+      As informações que não estão visíveis no diagrama como "dados críticos e sensíveis trafegados" estão dentro de cada componente.
+      Ao clicar neles é possível ver suas informações. 
       O arquivo original com o desenho será armazenado em breve para que você possa fazer o donwload e visualizar no seu "Threat Dragon v2.5.0-latest".
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/b9c62dde0f9f38ac5a8dfb36bbcabb1744d99766/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
+Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer se quiser ou não. EM DESENVOLVIMENTO
+
+| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | IF-THIS / THEN-THAT                                                                                                                                                | STRIDE do endpoint                                                                                                | Controles necessários                                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | **If** o cliente enviar um `idPedido` inválido **then** impedir criação de post<br>**If** o atacante tentar injetar valores no status **then** validar payload     | **S** (spoofing), **T** (tampering), **R** (repudiation), **I** (info disclosure), **D** (DoS), **E** (elevation) | Autenticação forte, validação de entrada, schema enforcement, rate limit, logs imutáveis, HTTPS, RBAC     |
+| **GET /posts/{idPedido}**    | `idPedido (S)`                                                                             | `statusAtual`, `descricaoStatus`, `localizacaoEntregador (S)`, `timestamp` | **If** usuário tentar acessar `idPedido` de outro cliente **then** negar acesso<br>**If** idPedido não existir **then** retornar erro controlado                   | **S**, **I**, **R**, **D** (DoS leve)                                                                             | Autorização por escopo, verificação de dono do recurso, masking de dados sensíveis, logs de acesso        |
+| **DELETE /posts/{idPedido}** | `idPedido (S)`, `motivoDelete`                                                             | `statusOperacao`, `timestampOperacao`                                      | **If** usuário tentar excluir post que não é dele **then** negar acesso<br>**If** atacante tentar spam de múltiplos deletes **then** aplicar rate limit e bloquear | **S**, **T**, **R**, **D**, **E**                                                                                 | Autorização forte, rate limit, bloqueio de brute force, registro de auditoria, validação do autor da ação |
+
+
 <br>
 <br>
+
+
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
 
