@@ -2,6 +2,8 @@
 ## Modelagem de ameaças passo a passo ## SENDO CORRIGIDO
 Antes de começar a modelagem de ameaças, devo possuir um esboço de uma arquitetura base de como será a aplicação ou pelo menos possuir uma proposta de solução técnica. Não precisa ser perfeita, é apenas uma arquitetura candidata.
 
+![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/b5b43eefc18acf3b21a0c18146aeffb671da547e/docs/project/images/Modelagem-de-amea%C3%A7as-arquitetura-base.png)
+
 <br>
 
 ### 1º- Temos que entender o que estamos estamos construindo ##
