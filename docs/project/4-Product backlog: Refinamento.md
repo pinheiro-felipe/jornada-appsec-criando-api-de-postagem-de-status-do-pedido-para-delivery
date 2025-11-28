@@ -199,17 +199,21 @@ do consome tempo, recursos e logo fica obsoleta.
 
 **2.4- Tabela com os dados das ameaças para o endpoint**
 
-    O que este endpoint introduz em termos de:
+    O que este endpoint "POST /posts" possui em termos de:
         Ameaça
         Sensibilidade
         Exposição
-        Controles
+        Atacante (perfil / motivação)
+        Como o atacante atacaria (Técnicas e Métodos)
+        Controle (mitigações)
+        
          
     Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer se quiser ou não. EM DESENVOLVIMENTO
 
-| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | IF-THIS / THEN-THAT                                                                                                                                                | STRIDE do endpoint                                                                                                | Controles necessários                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | **If** o cliente enviar um `idPedido` inválido **then** impedir criação de post<br>**If** o atacante tentar injetar valores no status **then** validar payload     | **S** (spoofing), **T** (tampering), **R** (repudiation), **I** (info disclosure), **D** (DoS), **E** (elevation) | Autenticação forte, validação de entrada, schema enforcement, rate limit, logs imutáveis, HTTPS, RBAC     |
+| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | IF-THIS / THEN-THAT                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | Endpoint autenticado acessível a todos → **exposição moderada**.<br>Exposição a requisições repetidas (brute force).<br>Aceita POST → aumenta superfície.  | **If** `idPedido` inválido **then** rejeitar<br>**If** payload inesperado **then** bloquear                    | S, T, R, I, D, E | Cliente malicioso / externo        | JSON tampering, brute force de IDs, DoS via payload grande      | Autenticação forte, validação, schema enforcement, rate limit, logs imutáveis, RBAC, HTTPS |
+
 
 
   	
