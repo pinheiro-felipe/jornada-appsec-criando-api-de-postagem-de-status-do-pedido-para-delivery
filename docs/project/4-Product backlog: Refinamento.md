@@ -72,7 +72,7 @@ do consome tempo, recursos e logo fica obsoleta.
           Ele de maneira nenhuma tem a pretenção de representar a arquitetura oficial da aplicação, apenas o pensanmento do dev naquele momento.
           Pode ser revisitado sempre que preciso, mas sempre deve ser comparando com a arquitetura oficial.
           
-      Para formar nosso racicínio das ameaças, vamos identificar:
+      Para formar nosso raciocínio das ameaças, vamos identificar:
 
           [ ] Entidade que interage com o sistema (usuário ou um serviço externo).
           [ ] Processo onde a ação é executada.
