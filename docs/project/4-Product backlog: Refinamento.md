@@ -140,18 +140,8 @@ do consome tempo, recursos e logo fica obsoleta.
 
 ![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/b9c62dde0f9f38ac5a8dfb36bbcabb1744d99766/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
 
-Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer se quiser ou não. EM DESENVOLVIMENTO
-
-| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | IF-THIS / THEN-THAT                                                                                                                                                | STRIDE do endpoint                                                                                                | Controles necessários                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | **If** o cliente enviar um `idPedido` inválido **then** impedir criação de post<br>**If** o atacante tentar injetar valores no status **then** validar payload     | **S** (spoofing), **T** (tampering), **R** (repudiation), **I** (info disclosure), **D** (DoS), **E** (elevation) | Autenticação forte, validação de entrada, schema enforcement, rate limit, logs imutáveis, HTTPS, RBAC     |
-
-
-
 <br>
 <br>
-
-
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
 
@@ -207,8 +197,20 @@ Após o desenho do diagrama de racicínio criamos uma tabela com os dados que en
             ENTÃO bloquear tentativa suspeita.
 
 
+**2.4- Tabela com os dados das ameaças para o endpoint**
 
-          
-    
+    O que este endpoint introduz em termos de:
+        Ameaça
+        Sensibilidade
+        Exposição
+        Controles
+         
+    Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer se quiser ou não. EM DESENVOLVIMENTO
+
+| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | IF-THIS / THEN-THAT                                                                                                                                                | STRIDE do endpoint                                                                                                | Controles necessários                                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | **If** o cliente enviar um `idPedido` inválido **then** impedir criação de post<br>**If** o atacante tentar injetar valores no status **then** validar payload     | **S** (spoofing), **T** (tampering), **R** (repudiation), **I** (info disclosure), **D** (DoS), **E** (elevation) | Autenticação forte, validação de entrada, schema enforcement, rate limit, logs imutáveis, HTTPS, RBAC     |
+
+
   	
       
