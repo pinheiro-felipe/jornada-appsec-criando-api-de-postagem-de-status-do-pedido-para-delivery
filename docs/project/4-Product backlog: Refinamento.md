@@ -113,7 +113,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
                           Porta 3336 do banco
                           Container que executa o worker
                           
-      O diagrama de racicínio foi desenhado usando a ferramenta "Threat Dragon v2.5.0-latest".
+      O nosso diagrama de racicínio foi desenhado usando a ferramenta "Threat Dragon v2.5.0-latest".
 
       Componentes da ferramenta Threat Dragon:
                           
