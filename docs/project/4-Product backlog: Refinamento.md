@@ -145,23 +145,24 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
 Esta é uma atividade de pesquisa na qual você busca identificar as principais ameaças da aplicação.
-Você pode fazer brainstorming ou utilizar alguma estrutura para orientar o raciocínio, como STRIDE, Kill Chain, CAPEC, Cornucopia (OWASP) e outras.
+Você pode fazer brainstorming ou utilizar alguma estrutura para orientar o raciocínio das ameaças, como STRIDE, Kill Chain, CAPEC, Cornucopia (OWASP) e outras.
 
-O objetivo da categorização de ameaças é ajudar a identificar ameaças do invasor (STRIDE). O diagrama produzido anteriormente ajuda a identificar 
-os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
+O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
   
-**2.1- Compenente**
+**2.1- Componente**
 
-**2.2- STRIDE: Baseado em categoria de ataque**
+**2.2- STRIDE**
 
-    Quais categorias de ataques podem afetar cada um dos componentes do diagrama de raciocínio de ameaças (Process, Data Store e Data Flow)?
+    O STRIDE é um modelo de categorização de ameaças que ajuda a identificar e classificar possíveis ações de um invasor.
+
+    Quais categorias de ameaças podem afetar cada um dos componentes do diagrama de raciocínio de ameaças (Process, Data Store e Data Flow)?
         Pode ocorrer Spoofing?
         Pode ocorrer Tampering?
         Pode ocorrer Repudiation?
         Pode ocorrer Information Disclosure?
         Pode ocorrer Denial of Service?
         Pode ocorrer Elevation of Privilege?
-    Para cada alerta existem mitigações.
+    Para cada ameaça identificada, existem mitigações específicas.
     
 **2.3- Cheklist If-This / Then-That motor de descoberta de ameaças baseado em lógica e comportamento**
 
