@@ -164,13 +164,13 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Pode ocorrer Elevation of Privilege?
     Para cada ameaça identificada, existem mitigações específicas.
     
-**2.3- Cheklist If-This / Then-That motor de descoberta de ameaças baseado em lógica e comportamento**
+**2.3- Cheklist SE (If-This) / ENTÃO (Then-That) ajuda a descobrir ameaças baseado em lógica e comportamento**
 
-    Checklist If-This (representa a condição que precisa ser satisfeita) / Then-That (representa a ação que será executada se a condição for satisfeita).
-    Busca descobrir o que acontece no sistema quando uma condição específica acontece.
+    Checklist SE "If-This" (representa a condição que precisa ser satisfeita) / ENTÃO "Then-That" (representa a ação que será executada se a condição for satisfeita).
+    Esse checklist busca descobrir o que acontece no sistema quando uma condição específica é satisfeita ou um evento ocorre.
     Ele identifica falhas lógicas, casos extremos, cenários condicionais, que o STRIDE às vezes não pega sozinho
     
-    Principalmente:
+    Principalmente casos de:
         Falhas de fluxo
         Falhas de regra de negócios
         Falhas de sequência
@@ -203,7 +203,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
             ENTÃO bloquear tentativa suspeita.
 
 
-**2.4- Tabela com os dados das ameaças para o endpoint**
+**2.4- Tabela com a organização dos dados das possíveis ameaças para o nosso endpoint**
 
     O que este endpoint "POST /posts" possui em termos de:
         Ameaça
@@ -214,7 +214,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Controle (mitigações)
         
          
-    Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer se quiser ou não. EM DESENVOLVIMENTO
+    Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer essa tabela ou não. EM DESENVOLVIMENTO
 
 | Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | IF-THIS / THEN-THAT                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
