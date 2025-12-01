@@ -51,7 +51,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 
          Evento + Dado: Adicionar um nova postagem de mídia referente ao status atual do pedido
 
-**1.4- Desenho do diagrama de raciocínio das ameaças**
+**1.4- Desenho do diagrama de raciocínio das ameaças para entender nosso cenário**
 
       O diagrama de raciocínio das ameaças, é um diagrama que se cria enquanto se rascunha a modelagem de ameaças para a história de usuário.
      
