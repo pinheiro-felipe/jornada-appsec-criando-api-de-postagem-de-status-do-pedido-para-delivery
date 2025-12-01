@@ -138,7 +138,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
       Ao clicar neles é possível ver suas informações. 
       O arquivo original com o desenho será armazenado em breve para que você possa fazer o donwload e visualizar no seu "Threat Dragon v2.5.0-latest".
 
-![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/b9c62dde0f9f38ac5a8dfb36bbcabb1744d99766/docs/project/images/Modelagem-de-amea%C3%A7as-(mini-fluxo)-E1-F1-H1.png)
+![Descrição da imagem](https://raw.githubusercontent.com/pinheiro-felipe/jornada-appsec-criando-api-de-postagem-de-status-do-pedido-para-delivery/0ceb616f6ac050cabead67f9c2e1ebb8493342e9/docs/project/images/Modelagem-de-amea%C3%A7as-(diagrama-raciocinio)-E1-F1-H1.png)
 
 <br>
 <br>
