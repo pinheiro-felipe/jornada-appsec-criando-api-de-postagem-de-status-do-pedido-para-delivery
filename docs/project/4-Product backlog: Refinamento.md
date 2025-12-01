@@ -77,7 +77,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
           [ ] Entidade que interage com o sistema (usuário ou um serviço externo).
           [ ] Processo onde a ação é executada.
           [ ] Local onde o dado é persistido.
-          [ ] Limite de Confiança.
+          [ ] Limite de confiança.
           [ ] Fluxo dos dados.
           [ ] Endpoints.
           [ ] Dados críticos e sensíveis trafegados.
