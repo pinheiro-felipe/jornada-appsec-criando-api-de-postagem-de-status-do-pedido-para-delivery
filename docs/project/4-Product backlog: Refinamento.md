@@ -168,10 +168,14 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
     Ele serve para guiar discussões de segurança, revelando riscos de autenticação, autorização, sessão, dados, operações e muito mais.
     
     Forma de uso espcificada no cornucopia:
-        Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer          no sistema e registra os requisitos, controles, testes e mitigações necessários.
+        Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer
+        no sistema e registra os requisitos, controles, testes e mitigações necessários.
 
      Forma de uso que pensei:
-        Reúna a equipe em um brainstorming e deixe o baralho acessível para todos. O grupo discute como um abusador poderia explorar o sistema a partir da história de usuário. Cada             pessoa seleciona as cartas de ameaça que melhor representam o cenário, focando nas categorias mais relevantes para a funcionalidade analisada. Todos podem propor cartas e               justificar por que a ameaça se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta a ameaça na hora, usando o brainstorming             como um filtro para determinar o que realmente deve entrar.
+        Reúna a equipe em um brainstorming e deixe o baralho acessível para todos. O grupo discute como um abusador poderia explorar o sistema a partir da história de usuário. 
+        Cada pessoa seleciona as cartas de ameaça que melhor representam o cenário, focando nas categorias mais relevantes para a funcionalidade analisada. 
+        Todos podem propor cartas e justificar por que a ameaça se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta 
+        a ameaça na hora, usando o brainstorming como um filtro para determinar o que realmente deve entrar.
 
         
         Como alguém poderia abusar desse fluxo? Como alguém vai te atacar? E porque? O que ele quer?
