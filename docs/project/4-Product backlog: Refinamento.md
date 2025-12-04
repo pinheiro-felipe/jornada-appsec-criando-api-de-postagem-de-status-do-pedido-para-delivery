@@ -149,9 +149,7 @@ Você pode fazer brainstorming ou utilizar alguma estrutura para orientar o raci
 
 O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
   
-**2.1- Componente**
-
-**2.2- STRIDE**
+**2.1- STRIDE**
 
     O STRIDE é um modelo de categorização de ameaças que ajuda a identificar e classificar possíveis ações de um invasor.
 
@@ -163,6 +161,24 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Pode ocorrer Denial of Service?
         Pode ocorrer Elevation of Privilege?
     Para cada ameaça identificada, existem mitigações específicas.
+
+**2.2- Cornucopia (OWASP)**
+
+    Cornucopia (OWASP) é um baralho de cartas criado para ajudar equipes a identificar ameaças de segurança durante o desenvolvimento de software.
+    Ele serve para guiar discussões de segurança, revelando riscos de autenticação, autorização, sessão, dados, operações e muito mais.
+    
+    Forma de uso espcificada no cornucopia:
+        Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer          no sistema e registra os requisitos, controles, testes e mitigações necessários.
+
+     Forma de uso que pensei:
+        Reúna a equipe em um brainstorming e deixe o baralho acessível para todos. O grupo discute como um abusador poderia explorar o sistema a partir da história de usuário. Cada             pessoa seleciona as cartas de ameaça que melhor representam o cenário, focando nas categorias mais relevantes para a funcionalidade analisada. Todos podem propor cartas e               justificar por que a ameaça se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta a ameaça na hora, usando o brainstorming             como um filtro para determinar o que realmente deve entrar.
+
+        
+        Como alguém poderia abusar desse fluxo? Como alguém vai te atacar? E porque? O que ele quer?
+        
+            Como um abusador, eu adicionaria comandos sql no campo de input do nome, para obter as senhas dos clientes
+            
+            O abusador é o agente de ameaça: usuário autenticado malicioso (cliente), atacantes externos (scripted), insider.
     
 **2.3- Cheklist SE (If-This) / ENTÃO (Then-That) ajuda a descobrir ameaças baseado em lógica e comportamento**
 
