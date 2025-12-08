@@ -167,7 +167,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
     Cornucopia (OWASP) é um baralho de cartas criado para ajudar equipes a identificar ameaças de segurança durante o desenvolvimento de software.
     Ele serve para guiar discussões de segurança, revelando riscos de autenticação, autorização, sessão, dados, operações e muito mais.
     
-    Forma de uso espcificada no cornucopia:
+    Forma de uso especificada no cornucopia:
         Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer
         no sistema e registra os requisitos, controles, testes e mitigações necessários.
 
