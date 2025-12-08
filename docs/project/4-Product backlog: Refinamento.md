@@ -144,7 +144,7 @@ do sistema consome tempo, recursos e logo fica obsoleta.
 <br>
 
 ### 2º- Descobrir as ameaças e o que pode dar errado ##
-Esta é uma atividade de pesquisa na qual você busca identificar as principais ameaças da aplicação.
+Esta é uma atividade de pesquisa na qual você busca identificar as principais ameaças da história de usuário.
 Você pode fazer brainstorming ou utilizar alguma estrutura para orientar o raciocínio das ameaças, como STRIDE, Kill Chain, CAPEC, Cornucopia (OWASP) e outras.
 
 O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de ameaças da perspectiva do invasor, como fontes de dados, processos, fluxos de dados e interações com usuários.
