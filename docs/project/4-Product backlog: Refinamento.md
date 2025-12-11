@@ -151,9 +151,19 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
   
 **2.1- STRIDE**
 
-    O STRIDE é um modelo de categorização de ameaças que ajuda a identificar e classificar possíveis ações de um invasor.
+    O STRIDE é um modelo de categorização de ameaças que ajuda a identificar e classificar possíveis ações de um atacante.
+    No STRIDE identificamos o que o atacante quer fazer num alto nível e que pilar da segurança é atingido (Confidencialidade, Integridade, Disponibilidade, etc.).
+    STRIDE revela a intenção do atacante
+    O STRIDE te ajuda a descobrir onde procurar vulnerabilidades posteriormente.
+    
+    S – Spoofing (Falsificação de identidade) → O atacante pode se passar por outro usuário?
+    T – Tampering (Alteração indevida) → O atacante pode alterar dados ou parâmetros?
+    R – Repudiation (Negação de ações) → O usuário pode negar o que fez?
+    I – Information Disclosure (Exposição de dados) → Dados podem ser expostos?
+    D – Denial of Service (Negação de serviço) → O atacante pode derrubar o serviço?
+    E – Elevation of Privilege (Elevação de privilégio) → O atacante pode ganhar mais acesso?
 
-    Quais categorias de ameaças podem afetar cada um dos componentes do diagrama de raciocínio de ameaças (Process, Data Store e Data Flow)?
+    Para cada componente do diagrama de raciocínio (Process, Data Store e Data Flow)), pergunte: Qual objetivo STRIDE (Spoofing, Tampering, etc.) um atacante gostaria de alcançar aqui?
         Pode ocorrer Spoofing?
         Pode ocorrer Tampering?
         Pode ocorrer Repudiation?
@@ -162,10 +172,13 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Pode ocorrer Elevation of Privilege?
     Para cada ameaça identificada, existem mitigações específicas.
 
-**2.2- Cornucopia (OWASP)**
+Depois de identificar o objetivo STRIDE, você deve se perguntar: Como o atacante pode tecnicamente explorar ulnerabilidades do sistema para atingir esse objetivo? 
+
+**2.2- Cornucopia (OWASP)** Quais vulnerabilidades ele pode explorar na história de usuário para alcançar seu objetivo?  — OWASP revela a falha que permite o ataque.
 
     Cornucopia (OWASP) é um baralho de cartas criado para ajudar equipes a identificar ameaças de segurança durante o desenvolvimento de software.
     Ele serve para guiar discussões de segurança, revelando riscos de autenticação, autorização, sessão, dados, operações e muito mais.
+    O que PODE ser explorado na História de Usuário (identifica os requisitos de segurança).
     
     Forma de uso especificada no cornucopia:
         Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer
@@ -177,7 +190,11 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Todos podem propor cartas e justificar por que a ameaça se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta 
         a ameaça na hora, usando o brainstorming como um filtro para determinar o que realmente deve entrar.
 
-        
+        É uma técnica de elicitação de requisitos de segurança. As cartas funcionam como um checklist para identificar:
+        STRIDE = diz "um atacante tenta fazer X".
+
+Cornucopia = diz "para impedir isso, seu sistema deve garantir Y".
+
         Como alguém poderia abusar desse fluxo? Como alguém vai te atacar? E porque? O que ele quer?
         
             Como um abusador, eu adicionaria comandos sql no campo de input do nome, para obter as senhas dos clientes
