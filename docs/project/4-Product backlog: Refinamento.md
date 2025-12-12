@@ -189,10 +189,10 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
 
          Atacante Interno (Funcionário/Admin): O que um usuário de alto privilégio pode fazer indevidamente (muitas vezes focando em Repudiation - fazer algo e negar que fez).
     
-**2.3- Cheklist SE (If-This) / ENTÃO (Then-That) / E (And) ajuda a definir nossas hipóteses**
+**2.3- Cheklist SE "Vulnerabilidade" / ENTÃO "Ameaça" / E "Objetivo" ajuda a definir nossas hipóteses**
 
-    Checklist SE "If-This" (representa a condição que precisa ser satisfeita) / ENTÃO "Then-That" (representa a ação que poderá ser executada se a condição for satisfeita) / E (And) representa o que o agente de ameaça deseja alcançar.
-    Esse checklist busca descobrir o que acontece no sistema quando uma condição específica é satisfeita ou um evento ocorre.
+    Checklist SE (representa a condição de vulnerabilidade que precisa ser satisfeita) / ENTÃO (representa a ação que poderá ser executada para explorar a vulnerabilidade se a condição for satisfeita) / E (representa o que o agente de ameaça deseja alcançar).
+    Esse checklist busca descobrir o que acontece no sistema quando uma condição específica relacionada a alguma vulnerabilidade é satisfeita.
     Ele identifica falhas lógicas, casos extremos, cenários condicionais, que o STRIDE às vezes não pega sozinho
     
     Principalmente casos de:
@@ -204,7 +204,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
         Falhas de validação contextual
         Falhas que só existem quando eventos se encadeiam
 
-    Exemplo de condicional, ação e objetivo:
+    Exemplo de condição relacionada a vulnerabilidade, ameaça e objetivo:
 
         SE "faltar validação nos campos de input"
            ENTÃO "o agente de ameaça pode injetar código sql malicioso"
@@ -213,9 +213,10 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
 **2.4- Tabela com a organização dos dados das possíveis ameaças para o nosso endpoint**
 
     O que este endpoint "POST /posts" possui em termos de:
-        Ameaça
         Sensibilidade
         Exposição
+        Vulnerabilidade | Ameaça | Objetivo
+        STRIDE
         Atacante (perfil / motivação)
         Como o atacante atacaria (Técnicas e Métodos)
         Controle (mitigações)
@@ -223,7 +224,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
          
     Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer essa tabela ou não. EM DESENVOLVIMENTO
 
-| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | IF-THIS / THEN-THAT                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
+| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | Vulnerabilidade | Ameaça | Objetivo                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | Endpoint autenticado acessível a todos → **exposição moderada**.<br>Exposição a requisições repetidas (brute force).<br>Aceita POST → aumenta superfície.  | **If** `idPedido` inválido **then** rejeitar<br>**If** payload inesperado **then** bloquear                    | S, T, R, I, D, E | Cliente malicioso / externo        | JSON tampering, brute force de IDs, DoS via payload grande      | Autenticação forte, validação, schema enforcement, rate limit, logs imutáveis, RBAC, HTTPS |
 
