@@ -215,7 +215,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
     O que este endpoint "POST /posts" possui em termos de:
         Sensibilidade
         Exposição
-        Vulnerabilidade | Ameaça | Objetivo
+        Vulnerabilidade/Ameaça/Objetivo
         STRIDE
         Atacante (perfil / motivação)
         Como o atacante atacaria (Técnicas e Métodos)
@@ -224,7 +224,7 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
          
     Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer essa tabela ou não. EM DESENVOLVIMENTO
 
-| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | Vulnerabilidade | Ameaça | Objetivo                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
+| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | Vulnerabilidade/Ameaça/Objetivo                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | Endpoint autenticado acessível a todos → **exposição moderada**.<br>Exposição a requisições repetidas (brute force).<br>Aceita POST → aumenta superfície.  | **If** `idPedido` inválido **then** rejeitar<br>**If** payload inesperado **then** bloquear                    | S, T, R, I, D, E | Cliente malicioso / externo        | JSON tampering, brute force de IDs, DoS via payload grande      | Autenticação forte, validação, schema enforcement, rate limit, logs imutáveis, RBAC, HTTPS |
 
