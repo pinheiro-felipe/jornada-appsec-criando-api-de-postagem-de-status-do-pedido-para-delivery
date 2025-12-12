@@ -152,58 +152,46 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
 **2.1- STRIDE**
 
     O STRIDE é um modelo de categorização de ameaças que ajuda a identificar e classificar possíveis ações de um atacante.
-    No STRIDE identificamos o que o atacante quer fazer num alto nível e que pilar da segurança é atingido (Confidencialidade, Integridade, Disponibilidade, etc.).
-    STRIDE revela a intenção do atacante
-    O STRIDE te ajuda a descobrir onde procurar vulnerabilidades posteriormente.
+    No STRIDE identificamos o que o atacante quer fazer num alto nível e que pilar da segurança pode ser atingido (Confidencialidade, Integridade, Disponibilidade, etc.).
+    STRIDE revela a intenção do atacante e te ajuda a descobrir onde procurar vulnerabilidades posteriormente.
+    Como alguém poderia abusar desse fluxo? O que ele quer? E porque?
     
-    S – Spoofing (Falsificação de identidade) → O atacante pode se passar por outro usuário?
-    T – Tampering (Alteração indevida) → O atacante pode alterar dados ou parâmetros?
-    R – Repudiation (Negação de ações) → O usuário pode negar o que fez?
-    I – Information Disclosure (Exposição de dados) → Dados podem ser expostos?
-    D – Denial of Service (Negação de serviço) → O atacante pode derrubar o serviço?
-    E – Elevation of Privilege (Elevação de privilégio) → O atacante pode ganhar mais acesso?
-
     Para cada componente do diagrama de raciocínio (Process, Data Store e Data Flow)), pergunte: Qual objetivo STRIDE (Spoofing, Tampering, etc.) um atacante gostaria de alcançar aqui?
-        Pode ocorrer Spoofing?
-        Pode ocorrer Tampering?
-        Pode ocorrer Repudiation?
-        Pode ocorrer Information Disclosure?
-        Pode ocorrer Denial of Service?
-        Pode ocorrer Elevation of Privilege?
+       S – Spoofing (Falsificação de identidade) → O atacante pode se passar por outro usuário?
+       T – Tampering (Alteração indevida) → O atacante pode alterar dados ou parâmetros?
+       R – Repudiation (Negação de ações) → O usuário pode negar o que fez?
+       I – Information Disclosure (Exposição de dados) → Dados podem ser expostos?
+       D – Denial of Service (Negação de serviço) → O atacante pode derrubar o serviço?
+       E – Elevation of Privilege (Elevação de privilégio) → O atacante pode ganhar acesso superior ao que já possui?
     Para cada ameaça identificada, existem mitigações específicas.
 
-Depois de identificar o objetivo STRIDE, você deve se perguntar: Como o atacante pode tecnicamente explorar ulnerabilidades do sistema para atingir esse objetivo? 
-
-**2.2- Cornucopia (OWASP)** Quais vulnerabilidades ele pode explorar na história de usuário para alcançar seu objetivo?  — OWASP revela a falha que permite o ataque.
-
-    Cornucopia (OWASP) é um baralho de cartas criado para ajudar equipes a identificar ameaças de segurança durante o desenvolvimento de software.
-    Ele serve para guiar discussões de segurança, revelando riscos de autenticação, autorização, sessão, dados, operações e muito mais.
-    O que PODE ser explorado na História de Usuário (identifica os requisitos de segurança).
-    
-    Forma de uso especificada no cornucopia:
-        Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta de ameaça. Em seguida, o grupo discute como aquela ameaça pode ocorrer
-        no sistema e registra os requisitos, controles, testes e mitigações necessários.
+**2.2- Cornucopia (OWASP)** 
+   
+    Cornucopia (OWASP) é um baralho de cartas criado para ajudar equipes a identificar requisitos de segurança e potenciais vulnerabilidades em seus softwares de forma colaborativa.
+ 
+    Forma de uso especificada no owasp cornucopia:
+        Embaralhe as cartas, distribua entre os participantes e, em cada rodada, cada pessoa apresenta uma carta e justifica o porque aquela carta se encaixa na história de usuário. Em         seguida, o grupo diz se corncorda ou não e acontecem os confrontos de ideias. A carta que for aceita é registrada. Em cada uma ja possui dicas de mitigação.
 
      Forma de uso que pensei:
-        Reúna a equipe em um brainstorming e deixe o baralho acessível para todos. O grupo discute como um abusador poderia explorar o sistema a partir da história de usuário. 
-        Cada pessoa seleciona as cartas de ameaça que melhor representam o cenário, focando nas categorias mais relevantes para a funcionalidade analisada. 
-        Todos podem propor cartas e justificar por que a ameaça se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta 
-        a ameaça na hora, usando o brainstorming como um filtro para determinar o que realmente deve entrar.
+        Reúna a equipe em um brainstorming e deixe o baralho acessível para todos. O grupo discute como um abusador poderia explorar o sistema a partir da história de usuário visando           seu objetivo definido no STRIDE. 
+        Cada pessoa seleciona as cartas que melhor representam o cenário, focando nas categorias mais relevantes para a funcionalidade analisada. 
+        Todos podem propor cartas e justificar por que ela se aplica; os demais podem concordar ou discordar de forma objetiva. Assim, a equipe inclui ou descarta 
+        a carta na hora, usando o brainstorming como um filtro para determinar o que realmente deve entrar.
+     
+     Depois de identificar o objetivo STRIDE, você deve se perguntar: Como o agente de ameaça pode tecnicamente explorar vulnerabilidades do sistema para atingir seu objetivo? 
+     Quais vulnerabilidades podem ser exploraradas na história de usuário para o agente de ameaça alcançar o que deseja? 
+           
+     O abusador é o agente de ameaça que pode ser:
 
-        É uma técnica de elicitação de requisitos de segurança. As cartas funcionam como um checklist para identificar:
-        STRIDE = diz "um atacante tenta fazer X".
+         Atacante Não-Autenticado (Anônimo): O que ele pode fazer sem fazer login? (Geralmente, focado em Denial of Service ou ataques de força bruta).
 
-Cornucopia = diz "para impedir isso, seu sistema deve garantir Y".
+         Atacante Autenticado (Usuário Comum): O que um usuário normal pode fazer a outro usuário, ou a um recurso que não é dele? (Foco em Broken Access Control, levando a Information          Disclosure ou Elevation of Privilege).
 
-        Como alguém poderia abusar desse fluxo? Como alguém vai te atacar? E porque? O que ele quer?
-        
-            Como um abusador, eu adicionaria comandos sql no campo de input do nome, para obter as senhas dos clientes
-            
-            O abusador é o agente de ameaça: usuário autenticado malicioso (cliente), atacantes externos (scripted), insider.
+         Atacante Interno (Funcionário/Admin): O que um usuário de alto privilégio pode fazer indevidamente (muitas vezes focando em Repudiation - fazer algo e negar que fez).
     
-**2.3- Cheklist SE (If-This) / ENTÃO (Then-That) ajuda a descobrir ameaças baseado em lógica e comportamento**
+**2.3- Cheklist SE (If-This) / ENTÃO (Then-That) / E (And) ajuda a definir nossas hipóteses**
 
-    Checklist SE "If-This" (representa a condição que precisa ser satisfeita) / ENTÃO "Then-That" (representa a ação que será executada se a condição for satisfeita).
+    Checklist SE "If-This" (representa a condição que precisa ser satisfeita) / ENTÃO "Then-That" (representa a ação que poderá ser executada se a condição for satisfeita) / E (And) representa o que o agente de ameaça deseja alcançar.
     Esse checklist busca descobrir o que acontece no sistema quando uma condição específica é satisfeita ou um evento ocorre.
     Ele identifica falhas lógicas, casos extremos, cenários condicionais, que o STRIDE às vezes não pega sozinho
     
@@ -216,30 +204,12 @@ Cornucopia = diz "para impedir isso, seu sistema deve garantir Y".
         Falhas de validação contextual
         Falhas que só existem quando eventos se encadeiam
 
-    Exemplos de condicionais e ações:
-        
-        SE minha história envolve entrada de usuário,
-            ENTÃO considerar validação, sanitização, limites.
-        
-        SE minha história envia dados para outro serviço,
-            ENTÃO considerar autenticação, autorização, integridade.
-        
-        SE minha história manipula dados sensíveis,
-            ENTÃO aplicar medidas de proteção de confidencialidade.
+    Exemplo de condicional, ação e objetivo:
 
-        SE o usuário clicar para alterar o endereço sem estar autenticado,
-            ENTÃO redirecionar para login.
+        SE "faltar validação nos campos de input"
+           ENTÃO "o agente de ameaça pode injetar código sql malicioso"
+              E "obter dados sensíveis do clientes"      
         
-        SE alguém tentar alterar o endereço para um local já utilizado por outro cliente,
-            ENTÃO retornar erro.
-        
-        SE o sistema receber o update com campo vazio,
-            ENTÃO ignorar alteração.
-        
-        SE o request vier sem CSRF token,
-            ENTÃO bloquear tentativa suspeita.
-
-
 **2.4- Tabela com a organização dos dados das possíveis ameaças para o nosso endpoint**
 
     O que este endpoint "POST /posts" possui em termos de:
