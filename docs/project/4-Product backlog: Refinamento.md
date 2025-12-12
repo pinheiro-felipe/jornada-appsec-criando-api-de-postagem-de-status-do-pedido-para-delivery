@@ -215,18 +215,21 @@ O diagrama produzido anteriormente ajuda a identificar os possíveis alvos de am
     O que este endpoint "POST /posts" possui em termos de:
         Sensibilidade
         Exposição
-        Vulnerabilidade/Ameaça/Objetivo
         STRIDE
         Atacante (perfil / motivação)
+        Vulnerabilidade / Ameaça / Objetivo
         Como o atacante atacaria (Técnicas e Métodos)
         Controle (mitigações)
         
          
     Após o desenho do diagrama de racicínio criamos uma tabela com os dados que encontramos. Fique a vontade para fazer essa tabela ou não. EM DESENVOLVIMENTO
 
-| Endpoint                     | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                                             | Exposição                                                                                                                                                  | Vulnerabilidade/Ameaça/Objetivo                                                                                            | STRIDE           | Atacante                           | Técnicas e Métodos                                              | Controles                                                                                  |
-| ---------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| **POST /posts**              | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`                                  | Endpoint autenticado acessível a todos → **exposição moderada**.<br>Exposição a requisições repetidas (brute force).<br>Aceita POST → aumenta superfície.  | **If** `idPedido` inválido **then** rejeitar<br>**If** payload inesperado **then** bloquear                    | S, T, R, I, D, E | Cliente malicioso / externo        | JSON tampering, brute force de IDs, DoS via payload grande      | Autenticação forte, validação, schema enforcement, rate limit, logs imutáveis, RBAC, HTTPS |
+| Endpoint        | Dados de entrada / sensíveis (S)                                                           | Dados de saída / sensíveis (S)                 | Exposição                                                                                                                           | STRIDE        | Atacante                    | Vulnerabilidade / Ameaça / Objetivo                                                                 | Técnicas e Métodos                              | Controles                                                                                  |
+|-----------------|---------------------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------|--------------------------------------------------------------------------------------------|
+| **POST /posts** | `idPedido (S)`, `statusAtual`, `descricaoStatus`, `timestamp`, `localizacaoEntregador (S)` | `idPost`, `statusSalvo`, `timestampSalvo`     | Endpoint autenticado, acessível a todos → **exposição moderada**.<br>Exposto a repetição de requisições (brute force).<br>Aceita POST → maior superfície. | S, T, R, I, D, E | Cliente malicioso / externo | **SE** "faltar validação nos campos de input" <br>
+           **ENTÃO** "o agente de ameaça pode injetar código sql malicioso" <br>
+              **E** "obter dados sensíveis do clientes"          | JSON tampering, brute force de IDs, DoS por payload grande | Autenticação forte, validação, schema enforcement, rate limit, logs imutáveis, RBAC, HTTPS |
+
 
 
 
